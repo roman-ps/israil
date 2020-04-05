@@ -1,0 +1,15 @@
+.wrapper {
+  min-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media($tablet) {
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  @media ($mobile) {
+    width: 320px;
+    padding: 0 16px;
+  }
+}
