@@ -22,7 +22,7 @@
   <header class="header">
     <div class="wrapper">
       <a class="header__phone" href="#">+ (972) 2-621-6581</a>
-      <a class="logo" href="#">
+      <a class="logo" href="#">Логотип
         <img src="img/logo.png" alt="Israel Journey" width="137" height="48">
       </a>
       <a class="header_callback" href="#">Заказать звонок</a>
@@ -121,8 +121,10 @@
     <p class="drive__description">
       Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!
     </p>
-    <input type="tel" name="phone" id="phone" placeholder="Телефон">
-    <a class="drive__callme" href="#">Перезвоните мне</a>
+    <form class="drive__form" action="#" method="POST">
+      <input class="drive__form-input" type="tel" name="phone" id="phone" placeholder="Телефон">
+      <button class="drive__btn btn" type="button">Перезвоните</a>
+    </form>
   </section>
 
   <section class="way">
@@ -130,16 +132,16 @@
     <p class="way__description">
       Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.
     </p>
-    <p class="">
+    <strong class="way__important">
       Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:
-    </p>
+    </strong>
     <ul class="way__list">
       <li class="way__item">Быть в возрасте от 16 до 30 лет</li>
       <li class="way__item">Иметь оконченное среднее образование</li>
       <li class="way__item">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>
       <li class="way__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
     </ul>
-    <p class="">
+    <p class="way__note">
       Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.
     </p>
   </section>
@@ -267,25 +269,107 @@
       </div>
       <div class="reviews__data-container">
         <div class="reviews__item">
-          <span class="reviews__person">Ольга Михайлова</span>
+          <cite class="reviews__person">Ольга Михайлова</cite>
           <p class="reviews__place">
             <span class="reviews__place-title">Программа:</span>Арт-Тель, февраль-сетнябрь 2017
           </p>
           <blockquote class="reviews__quote">
-            Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега. 
+            Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
           </blockquote>
           <blockquote class="reviews__quote">
             С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
           </blockquote>
           <a class="reviews__readmore" href="#">Читать подробнее</a>
         </div>
-          <div class="reviews__pagination">
-            <span class="reviews__current-page">3</span>/<span class="reviews__all-page">6</span>
-            <a class="reviews__prev-page" href="#">Предыдущая</a><a class="reviews__next-page" href="#">Следующая</a>
-          </div>
+        <div class="reviews__pagination">
+          <span class="reviews__current-page">3</span>/<span class="reviews__all-page">6</span>
+          <a class="reviews__prev-page" href="#">Предыдущая</a><a class="reviews__next-page" href="#">Следующая</a>
+        </div>
+        <ul class="reviews__social social">
+          <li class="social__item">
+            <a class="social__link" href="http://facebook">Facebook</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="http://twitter.com">Twitter</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="http://instagram.com">Instagram</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
+
+  <section class="contacts">
+    <h2 class="contacts__title title">Узнать подробности</h2>
+    <div class="contacts__top-container">
+      <p class="contacts__location">Ваш город
+        <span class="contacts__city">Новосибирск</span>
+      </p>
+      <div class="contacts__curator">
+        <div class="contacts__pic-container">
+          <img class="contacts__curator-pic" src="img/contacts-curator_anna.jpg" width="144" height="172">
+        </div>
+        <div class="contact__data-container">
+          <p class="">
+            <span class="">Ваш куратор: </span>Анна Горелик
+          </p>
+          <p class="contacts__address">
+            Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»
+          </p>
+          <ul class="contacts__social social">
+            <li class="social__item">
+              <a class="social__link" href="http://facebook">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="http://whatsapp.com">Whatsapp</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="http://telegram.com">Telegram</a>
+            </li>
+          </ul>
+        </div>
+        <p class="">
+          Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором,узнайте подробнее о программах и выберите свою !
+        </p>
+      </div>
+    </div>
+    <div class="contacts__bottom-container">
+      <div class="contacts__text">
+        <strong class="contacts__text-important">
+          Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
+        </strong>
+        <p class="contacts__text-bottom">
+          Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
+        </p>
+      </div>
+      <form class="contacts__form" action="#" method="POST">
+        <input class="contacts__form-input" type="text" placeholder="Имя" name="name">
+        <input class="contacts__form-input" type="tel" placeholder="+7(923)41" name="phone">
+        <button class="contacts__btn btn" type="button">Перезвоните</a>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <a class="footer-logo" href="#">Лого
+      <img src="img/logo-footer.png" alt="Israel Journey" width="137" height="48">
+    </a>
+    <p class="footer__copyright copyright">
+      Copyright someDesignCompany ©2019
+    </p>
+    <ul class="footer__social social">
+      <li class="social__item">
+        <a class="social__link" href="http://facebook">Facebook</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="http://twitter.com">Twitter</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="http://instagram.com">Instagram</a>
+      </li>
+    </ul>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
