@@ -1,14 +1,14 @@
 .header {
-  padding: 48px 0 0;
-  font-family: Fira Sans;
+  padding: 32px 0 0;
+  font-family: $font-firasans;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
 }
 .header .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
 }
 
 .header__phone {
@@ -18,8 +18,36 @@
 .header__callback {
   @include link-standart;
   border-bottom: 1px dashed #000000;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
   font-variant: small-caps;
+}
+
+@media #{$mobile} {
+  .header {
+    font-size: 14px;
+    line-height: 17px;
+    padding-top: 20px;
+  }
+  
+  .header .wrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-end;
+    position: relative;
+  }
+  
+  .header__logo {
+    position: absolute;
+    order: -1;
+    left: 0;
+    top: 0px;
+  }
+
+  .header__phone {
+    order: 0;
+  }
+
+  .header__callback {
+    order: 1;
+    align-self: flex-end;
+  }
 }

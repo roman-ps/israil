@@ -19,356 +19,385 @@
 </head>
 <body>
 
-  <header class="header">
-    <div class="wrapper">
-      <a class="header__phone" href="#">+ (972) 2-621-6581</a>
-      <a class="logo" href="#">Логотип
-        <img src="img/logo.png" alt="Israel Journey" width="137" height="48">
-      </a>
-      <a class="header__callback" href="#">Заказать звонок</a>
+  <div class="main-container">
+    <header class="header">
+      <div class="wrapper">
+        <a class="header__phone" href="#">+ (972) 2-621-6581</a>
+        <a class="header__logo logo" href="#">Логотип
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo.png">
+            <source media="(min-width: 320px) and (max-width: 767px)" srcset="img/logo-m.png">
+            <img src="img/logo.png" alt="Israel Journey">
+          </picture>
+        </a>
+        <a class="header__callback" href="#">Заказать звонок</a>
     </div>
   </header>
   <section class="promo">
     <h1 class="promo__title">Израиль</h1>
     <p class="promo__description">Учёба, путешествие и карьера для еврейской молодёжи</p>
-    <div class="scrolling">
+    <div class="promo__scrolling scrolling">
       <img src="img/icon-scroll2.svg">
     </div>
   </section>
+</div>
 
   <section class="about">
-    <h2 class="about__title title">О программе</h2>
-    <p class="about__text">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+    <div class="wrapper">
+      <h2 class="about__title title">О программе</h2>
+      <p class="about__text">
+        «Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. 
+        <br>В течение освоения программ предусмотрен грант от 4200 до 8400$.
+      </p>
+    </div>
   </section>
 
   <section class="program">
-    <h2 class="program__title title">Программы</h2>
-    <div class="program__container">
-      <div class="program__tabs tabs">
-        <div class="tabs__item">
-          <input type="radio" name="tab" id="tab-1" checked>
-          <label for="tab-1">Общие</label>
+    <div class="wrapper">
+      <h2 class="program__title title">Программы</h2>
+      <div class="program__container">
+        <div class="program__tabs tabs">
+          <div class="tabs__item">
+            <input type="radio" name="tab" id="tab-1" checked>
+            <label for="tab-1">Общие</label>
+          </div>
+          <div class="tabs__item">
+            <input type="radio" name="tab" id="tab-2">
+            <label for="tab-2">Академические</label>
+          </div>
+          <div class="tabs__item">
+            <input type="radio" name="tab" id="tab-3">
+            <label for="tab-3">Стажировки</label>
+          </div>
+          <div class="tabs__item">
+            <input type="radio" name="tab" id="tab-4">
+            <label for="tab-4">Волонтёрство</label>
+          </div>
+          <div class="tabs__item">
+            <input type="radio" name="tab" id="tab-5">
+            <label for="tab-5">Религиозные</label>
+          </div>
         </div>
-        <div class="tabs__item">
-          <input type="radio" name="tab" id="tab-2">
-          <label for="tab-2">Академические</label>
-        </div>
-        <div class="tabs__item">
-          <input type="radio" name="tab" id="tab-3">
-          <label for="tab-3">Стажировки</label>
-        </div>
-        <div class="tabs__item">
-          <input type="radio" name="tab" id="tab-4">
-          <label for="tab-4">Волонтёрство</label>
-        </div>
-        <div class="tabs__item">
-          <input type="radio" name="tab" id="tab-5">
-          <label for="tab-5">Религиозные</label>
-        </div>
-      </div>
-      <div class="tabs__descriptions">
-        <div class="tabs__description" id="tab-1">
-          <h3 class="tabs__description-title">Общие</h3>
-          <p class="tabs__description-text">
-            Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
-          </p>
-          <p class="tabs__description-text">
-            Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
-          </p>
-        </div>
-        <div class="tabs__description" id="tab-2">
-          <h3 class="tabs__description-title">Академические</h3>
-          <p class="tabs__description-text">
-            Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
-          </p>
-          <p class="tabs__description-text">
-            Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
-          </p>
-        </div>
-        <div class="tabs__description" id="tab-3">
-          <h3 class="tabs__description-title">Стажировки</h3>
-          <p class="tabs__description-text">
-            Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
-          </p>
-          <p class="tabs__description-text">
-            Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
-          </p>
-        </div>
-        <div class="tabs__description" id="tab-4">
-          <h3 class="tabs__description-title">Волонтёрство</h3>
-          <p class="tabs__description-text">
-            Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
-          </p>
-          <p class="tabs__description-text">
-            Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
-          </p>
-        </div>
-        <div class="tabs__description" id="tab-5">
-          <h3 class="tabs__description-title">Религиозные</h3>
-          <p class="tabs__description-text">
-            Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
-          </p>
-          <p class="tabs__description-text">
-            Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
-          </p>
+        <div class="tabs__descriptions">
+          <div class="tabs__description" id="tab-1">
+            <h3 class="tabs__description-title">Общие</h3>
+            <p class="tabs__description-text">
+              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
+            </p>
+            <p class="tabs__description-text">
+              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+            </p>
+          </div>
+          <div class="tabs__description" id="tab-2">
+            <h3 class="tabs__description-title">Академические</h3>
+            <p class="tabs__description-text">
+              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
+            </p>
+            <p class="tabs__description-text">
+              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+            </p>
+          </div>
+          <div class="tabs__description" id="tab-3">
+            <h3 class="tabs__description-title">Стажировки</h3>
+            <p class="tabs__description-text">
+              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
+            </p>
+            <p class="tabs__description-text">
+              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+            </p>
+          </div>
+          <div class="tabs__description" id="tab-4">
+            <h3 class="tabs__description-title">Волонтёрство</h3>
+            <p class="tabs__description-text">
+              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
+            </p>
+            <p class="tabs__description-text">
+              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+            </p>
+          </div>
+          <div class="tabs__description" id="tab-5">
+            <h3 class="tabs__description-title">Религиозные</h3>
+            <p class="tabs__description-text">
+              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
+            </p>
+            <p class="tabs__description-text">
+              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="drive">
-    <h2 class="drive__title title">Хочу поехать!</h2>
-    <p class="drive__description">
-      Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!
-    </p>
-    <form class="drive__form" action="#" method="POST">
-      <input class="drive__form-input" type="tel" name="phone" id="phone" placeholder="Телефон">
-      <button class="drive__btn btn" type="button">Перезвоните</a>
-    </form>
-  </section>
-
-  <section class="way">
-    <h2 class="way__title title">Как поехать</h2>
-    <p class="way__description">
-      Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.
-    </p>
-    <strong class="way__important">
-      Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:
-    </strong>
-    <ul class="way__list">
-      <li class="way__item">Быть в возрасте от 16 до 30 лет</li>
-      <li class="way__item">Иметь оконченное среднее образование</li>
-      <li class="way__item">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>
-      <li class="way__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
-    </ul>
-    <p class="way__note">
-      Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.
-    </p>
-  </section>
-
-  <section class="residence">
-    <h2 class="residence__title title">Жизнь в Израиле</h2>
-    <p class="residence__subtitle">
-      Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.
-    </p>
-    <div class="sliders">
-      <input type="radio" id="slider-1" name="sliders" checked>
-      <input type="radio" id="slider-2" name="sliders" checked>
-      <input type="radio" id="slider-3" name="sliders" checked>
-      <input type="radio" id="slider-4" name="sliders" checked>
-      <input type="radio" id="slider-5" name="sliders" checked>
-      <div class="sliders__control">
-        <label for="slider-1"></label>
-        <label for="slider-2"></label>
-        <label for="slider-3"></label>
-        <label for="slider-4"></label>
-        <label for="slider-5"></label>
-      </div>
-      <ul class="sliders__list">
-        <li class="sliders__item">
-          <img src="img/residence-pic_big.jpg" width="482" height="732" alt="Экскурсии">
-          <p class="sliders__item-text">
-            Экскурсии по Израилю и знакомство с его историей
-          </p>
-        </li>
-        <li class="sliders__item">
-          <img src="img/residence-pic_1.jpg" width="211" height="318" alt="Экскурсии">
-          <p class="sliders__item-text">
-            Изучение иврита
-          </p>
-        </li>
-        <li class="sliders__item">
-          <img src="img/residence-pic_2.jpg" width="411" height="318" alt="Экскурсии">
-          <p class="sliders__item-text">
-            Обучение современным навыкам и профессиям
-          </p>
-        </li>
-        <li class="sliders__item">
-          <img src="img/residence-pic_3.jpg" width="411" height="318" alt="Экскурсии">
-          <p class="sliders__item-text">
-            Совместные творческие проекты с израильской молодёжью
-          </p>
-        </li>
-        <li class="sliders__item">
-          <img src="img/residence-pic_4.jpg" width="214" height="318" alt="Экскурсии">
-          <p class="sliders__item-text">
-            Развитие лидерства
-          </p>
-        </li>
-      </ul>
+    <div class="wrapper">
+      <h2 class="drive__title title">Хочу поехать!</h2>
+      <p class="drive__description">
+        Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!
+      </p>
+      <form class="drive__form" action="#" method="POST">
+        <input class="drive__form-input" type="tel" name="phone" id="phone" placeholder="Телефон">
+        <button class="drive__btn btn" type="button">Перезвоните</a>
+        </form>
     </div>
   </section>
 
-  <section class="mention">
-    <h2 class="mention__title title">#MASAISRAEL</h2>
-    <p class="mention__description">
-      Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.
-    </p>
-    <a class="mention__link" href="#">Смотреть фото</a>
+  <section class="way">
+    <div class="wrapper">
+      <h2 class="way__title title">Как поехать</h2>
+      <p class="way__description">
+        Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.
+      </p>
+      <strong class="way__important">
+        Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:
+      </strong>
+      <ul class="way__list">
+        <li class="way__item">Быть в возрасте от 16 до 30 лет</li>
+        <li class="way__item">Иметь оконченное среднее образование</li>
+        <li class="way__item">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>
+        <li class="way__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
+      </ul>
+      <p class="way__note">
+        Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.
+      </p>
+    </div>
   </section>
 
-  <section class="faq">
-    <h2 class="faq__title title">Частые вопросы</h2>
-    <ul class="faq__list">
-      <li class="faq__list-item">
-        <p class="faq__list-title">
-          <span class="faq__list-number">1 </span>Кто организатор? Какие сроки у программы?
-        </p>
-        <p class="faq__list-description">
-          Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
-        </p>
-      </li>
-      <li class="faq__list-item">
-        <p class="faq__list-title">
-          <span class="faq__list-number">2 </span>Что такое грант на обучение?
-        </p>
-        <p class="faq__list-description">
-          Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
-        </p>
-      </li>
-      <li class="faq__list-item">
-        <p class="faq__list-title">
-          <span class="faq__list-number">3 </span>Как определяется стоимость программы?
-        </p>
-        <p class="faq__list-description">
-          Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
-        </p>
-      </li>
-      <li class="faq__list-item">
-        <p class="faq__list-title">
-          <span class="faq__list-number">4 </span>Что такое грант на обучение?
-        </p>
-        <p class="faq__list-description">
-          Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
-        </p>
-      </li>
-      <li class="faq__list-item">
-        <p class="faq__list-title">
-          <span class="faq__list-number">5 </span>Признаётся ли учеба в рамках проекта для дальнейшего обучения?
-        </p>
-        <p class="faq__list-description">
-          Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
-        </p>
-      </li>
-      <li class="faq__list-item">
-        <p class="faq__list-title">
-          <span class="faq__list-number">6 </span>Как выглдядит полный процесс регистрации на программу «Маса»?
-        </p>
-        <p class="faq__list-description">
-          Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
-        </p>
-      </li>
-    </ul>
-  </section>
-
-  <section class="reviews">
-    <h2 class="reviews__title title">Отзывы</h2>
-    <div class="reviews__main-container">
-      <div class="reviews__pic-container">
-        <img src="img/reviews-olga.jpg" width="353" height="528" alt="Отзыв Ольги">
-      </div>
-      <div class="reviews__data-container">
-        <div class="reviews__item">
-          <cite class="reviews__person">Ольга Михайлова</cite>
-          <p class="reviews__place">
-            <span class="reviews__place-title">Программа:</span>Арт-Тель, февраль-сетнябрь 2017
-          </p>
-          <blockquote class="reviews__quote">
-            Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
-          </blockquote>
-          <blockquote class="reviews__quote">
-            С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
-          </blockquote>
-          <a class="reviews__readmore" href="#">Читать подробнее</a>
+  <section class="residence">
+    <div class="wrapper">
+      <h2 class="residence__title title">Жизнь в Израиле</h2>
+      <p class="residence__subtitle">
+        Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.
+      </p>
+      <div class="sliders">
+        <input type="radio" id="slider-1" name="sliders" checked>
+        <input type="radio" id="slider-2" name="sliders" checked>
+        <input type="radio" id="slider-3" name="sliders" checked>
+        <input type="radio" id="slider-4" name="sliders" checked>
+        <input type="radio" id="slider-5" name="sliders" checked>
+        <div class="sliders__control">
+          <label for="slider-1"></label>
+          <label for="slider-2"></label>
+          <label for="slider-3"></label>
+          <label for="slider-4"></label>
+          <label for="slider-5"></label>
         </div>
-        <div class="reviews__pagination">
-          <span class="reviews__current-page">3</span>/<span class="reviews__all-page">6</span>
-          <a class="reviews__prev-page" href="#">Предыдущая</a><a class="reviews__next-page" href="#">Следующая</a>
-        </div>
-        <ul class="reviews__social social">
-          <li class="social__item">
-            <a class="social__link" href="http://facebook">Facebook</a>
+        <ul class="sliders__list">
+          <li class="sliders__item">
+            <img src="img/residence-pic_big.jpg" width="482" height="732" alt="Экскурсии">
+            <p class="sliders__item-text">
+              Экскурсии по Израилю и знакомство с его историей
+            </p>
           </li>
-          <li class="social__item">
-            <a class="social__link" href="http://twitter.com">Twitter</a>
+          <li class="sliders__item">
+            <img src="img/residence-pic_1.jpg" width="211" height="318" alt="Экскурсии">
+            <p class="sliders__item-text">
+              Изучение иврита
+            </p>
           </li>
-          <li class="social__item">
-            <a class="social__link" href="http://instagram.com">Instagram</a>
+          <li class="sliders__item">
+            <img src="img/residence-pic_2.jpg" width="411" height="318" alt="Экскурсии">
+            <p class="sliders__item-text">
+              Обучение современным навыкам и профессиям
+            </p>
+          </li>
+          <li class="sliders__item">
+            <img src="img/residence-pic_3.jpg" width="411" height="318" alt="Экскурсии">
+            <p class="sliders__item-text">
+              Совместные творческие проекты с израильской молодёжью
+            </p>
+          </li>
+          <li class="sliders__item">
+            <img src="img/residence-pic_4.jpg" width="214" height="318" alt="Экскурсии">
+            <p class="sliders__item-text">
+              Развитие лидерства
+            </p>
           </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="contacts">
-    <h2 class="contacts__title title">Узнать подробности</h2>
-    <div class="contacts__top-container">
-      <p class="contacts__location">Ваш город
-        <span class="contacts__city">Новосибирск</span>
+  <section class="mention">
+    <div class="wrapper">
+      <h2 class="mention__title title">#MASAISRAEL</h2>
+      <p class="mention__description">
+        Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.
       </p>
-      <div class="contacts__curator">
-        <div class="contacts__pic-container">
-          <img class="contacts__curator-pic" src="img/contacts-curator_anna.jpg" width="144" height="172">
+      <a class="mention__link" href="#">Смотреть фото</a>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrapper">
+      <h2 class="faq__title title">Частые вопросы</h2>
+      <ul class="faq__list">
+        <li class="faq__list-item">
+          <p class="faq__list-title">
+            <span class="faq__list-number">1 </span>Кто организатор? Какие сроки у программы?
+          </p>
+          <p class="faq__list-description">
+            Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
+          </p>
+        </li>
+        <li class="faq__list-item">
+          <p class="faq__list-title">
+            <span class="faq__list-number">2 </span>Что такое грант на обучение?
+          </p>
+          <p class="faq__list-description">
+            Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
+          </p>
+        </li>
+        <li class="faq__list-item">
+          <p class="faq__list-title">
+            <span class="faq__list-number">3 </span>Как определяется стоимость программы?
+          </p>
+          <p class="faq__list-description">
+            Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
+          </p>
+        </li>
+        <li class="faq__list-item">
+          <p class="faq__list-title">
+            <span class="faq__list-number">4 </span>Что такое грант на обучение?
+          </p>
+          <p class="faq__list-description">
+            Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
+          </p>
+        </li>
+        <li class="faq__list-item">
+          <p class="faq__list-title">
+            <span class="faq__list-number">5 </span>Признаётся ли учеба в рамках проекта для дальнейшего обучения?
+          </p>
+          <p class="faq__list-description">
+            Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
+          </p>
+        </li>
+        <li class="faq__list-item">
+          <p class="faq__list-title">
+            <span class="faq__list-number">6 </span>Как выглдядит полный процесс регистрации на программу «Маса»?
+          </p>
+          <p class="faq__list-description">
+            Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrapper">
+      <h2 class="reviews__title title">Отзывы</h2>
+      <div class="reviews__main-container">
+        <div class="reviews__pic-container">
+          <img src="img/reviews-olga.jpg" width="353" height="528" alt="Отзыв Ольги">
         </div>
-        <div class="contact__data-container">
-          <p class="">
-            <span class="">Ваш куратор: </span>Анна Горелик
-          </p>
-          <p class="contacts__address">
-            Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»
-          </p>
-          <ul class="contacts__social social">
+        <div class="reviews__data-container">
+          <div class="reviews__item">
+            <cite class="reviews__person">Ольга Михайлова</cite>
+            <p class="reviews__place">
+              <span class="reviews__place-title">Программа:</span>Арт-Тель, февраль-сетнябрь 2017
+            </p>
+            <blockquote class="reviews__quote">
+              Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
+            </blockquote>
+            <blockquote class="reviews__quote">
+              С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
+            </blockquote>
+            <a class="reviews__readmore" href="#">Читать подробнее</a>
+          </div>
+          <div class="reviews__pagination">
+            <span class="reviews__current-page">3</span>/<span class="reviews__all-page">6</span>
+            <a class="reviews__prev-page" href="#">Предыдущая</a><a class="reviews__next-page" href="#">Следующая</a>
+          </div>
+          <ul class="reviews__social social">
             <li class="social__item">
               <a class="social__link" href="http://facebook">Facebook</a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="http://whatsapp.com">Whatsapp</a>
+              <a class="social__link" href="http://twitter.com">Twitter</a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="http://telegram.com">Telegram</a>
+              <a class="social__link" href="http://instagram.com">Instagram</a>
             </li>
           </ul>
         </div>
-        <p class="">
-          Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором,узнайте подробнее о программах и выберите свою !
-        </p>
       </div>
     </div>
-    <div class="contacts__bottom-container">
-      <div class="contacts__text">
-        <strong class="contacts__text-important">
-          Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
-        </strong>
-        <p class="contacts__text-bottom">
-          Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
+  </section>
+    
+  <section class="contacts">
+    <div class="wrapper">
+      <h2 class="contacts__title title">Узнать подробности</h2>
+      <div class="contacts__top-container">
+        <p class="contacts__location">Ваш город
+          <span class="contacts__city">Новосибирск</span>
         </p>
+        <div class="contacts__curator">
+          <div class="contacts__pic-container">
+            <img class="contacts__curator-pic" src="img/contacts-curator_anna.jpg" width="144" height="172">
+          </div>
+          <div class="contact__data-container">
+            <p class="">
+              <span class="">Ваш куратор: </span>Анна Горелик
+            </p>
+            <p class="contacts__address">
+              Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»
+            </p>
+            <ul class="contacts__social social">
+              <li class="social__item">
+                <a class="social__link" href="http://facebook">Facebook</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="http://whatsapp.com">Whatsapp</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="http://telegram.com">Telegram</a>
+              </li>
+            </ul>
+          </div>
+          <p class="">
+            Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором,узнайте подробнее о программах и выберите свою !
+          </p>
+        </div>
       </div>
-      <form class="contacts__form" action="#" method="POST">
-        <input class="contacts__form-input" type="text" placeholder="Имя" name="name">
-        <input class="contacts__form-input" type="tel" placeholder="+7(923)41" name="phone">
-        <button class="contacts__btn btn" type="button">Перезвоните</a>
-      </form>
+      <div class="contacts__bottom-container">
+        <div class="contacts__text">
+          <strong class="contacts__text-important">
+            Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
+          </strong>
+          <p class="contacts__text-bottom">
+            Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
+          </p>
+        </div>
+        <form class="contacts__form" action="#" method="POST">
+          <input class="contacts__form-input" type="text" placeholder="Имя" name="name">
+          <input class="contacts__form-input" type="tel" placeholder="+7(923)41" name="phone">
+          <button class="contacts__btn btn" type="button">Перезвоните</a>
+        </form>
+      </div>
     </div>
   </section>
 
   <footer class="footer">
-    <a class="footer-logo" href="#">Лого
-      <img src="img/logo-footer.png" alt="Israel Journey" width="137" height="48">
-    </a>
-    <p class="footer__copyright copyright">
-      Copyright someDesignCompany ©2019
-    </p>
-    <ul class="footer__social social">
-      <li class="social__item">
-        <a class="social__link" href="http://facebook">Facebook</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="http://twitter.com">Twitter</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="http://instagram.com">Instagram</a>
-      </li>
-    </ul>
+    <div class="wrapper">
+      <a class="footer-logo" href="#">Лого
+        <img src="img/logo-footer.png" alt="Israel Journey" width="137" height="48">
+      </a>
+      <p class="footer__copyright copyright">
+        Copyright someDesignCompany ©2019
+      </p>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="http://facebook">Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="http://twitter.com">Twitter</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="http://instagram.com">Instagram</a>
+        </li>
+      </ul>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>
