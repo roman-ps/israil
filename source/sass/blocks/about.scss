@@ -1,5 +1,14 @@
+.about {
+  background-image:  url("../../img/about-color_bg.jpg");
+  background-repeat:  no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #ce9b9b;
+}
+
 .about__title {
   text-align: center;
+  margin-top: 0;
 }
 
 .about__text {
@@ -13,3 +22,19 @@
   width: 700px;
   margin: 24px auto 0;
 }
+
+@media #{$desktop} {
+  
+} 
+
+@media #{$tablet} {
+  
+} 
+
+@media #{$mobile} {
+  .about__text {
+    width: 100%;
+    font-size: 16px;
+    line-height: 160%;
+  }
+} 

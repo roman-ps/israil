@@ -1,12 +1,17 @@
 .wrapper {
-  width: 1024px;
+  width: 1366px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 2%;
   box-sizing: border-box;
+
+  @media #{$desktop} {
+    width: 1024px;
+    padding: 0 15px;
+  }
 
   @media #{$tablet} {
     width: 768px;
-    padding: 0 20px;
+    padding: 0 30px;
   }
 
   @media #{$mobile} {
@@ -16,9 +21,11 @@
 }
 
 .main-container {
-  background-image:  url("../img/promo-photo.png"), url("../img/promo-bg_overlay.jpg");
+  background-image:  url("../img/promo-bg.jpg"), url("../img/promo-photo.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: center 70%, center;
-  background-size: auto, cover;
+  background-position: bottom, bottom;
+  background-size: cover, auto;
   background-color: #ce9b9b;
+  //z-index: -100;
 }
+

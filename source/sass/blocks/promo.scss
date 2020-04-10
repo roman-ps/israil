@@ -1,6 +1,11 @@
 .promo {
-  //position: relative;
+  //background-image:  url("../../img/promo-photo.png");
+  //background-repeat:  no-repeat;
+  //background-position:  bottom center;
+  //background-size: auto;
+  //background-color: #ce9b9b;
 }
+
 .promo__title {
   font-family: $font-raleway;
   font-weight: 900;
@@ -28,15 +33,27 @@
 .promo__scrolling {
   margin: 32px auto 0;
   text-align: center;
-  //position: absolute;
-  //bottom: 0;
-  //left: 50%;
-  //transform: translate(-50%);
+}
+
+@media #{$desktop} {
+  .promo__title {
+    font-size: 90px;
+  }
 }
 
 @media #{$tablet} {
   .promo__description {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .promo__title {
+    font-size: 80px;
+  }
+}
+
+@media #{$mobile} {
+  .promo__title {
+    font-size: 72px;
   }
 }
