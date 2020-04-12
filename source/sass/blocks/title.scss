@@ -14,3 +14,10 @@
     line-height: 39px;
   }
 }
+
+@media #{$mobile} {
+  .title {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}

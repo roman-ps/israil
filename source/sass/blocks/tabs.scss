@@ -1,0 +1,104 @@
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs__control {
+  font-family: $font-firasans;
+  font-size: 15px;
+  line-height: 18px;
+  color: #484848;
+  opacity: 0.87;
+  width: 228px;
+}
+
+.tabs__item-input {
+  display: none;
+
+  &::after {
+    top: 0;
+    right: 0;
+    @include pseudo;
+    width: 0;
+    height: 0;
+    border: 68px solid black;
+    border-left: none;
+  }
+}
+
+#tab-1:checked ~ .tabs__control label[for="tab-1"],
+#tab-2:checked ~ .tabs__control label[for="tab-2"],
+#tab-3:checked ~ .tabs__control label[for="tab-3"],
+#tab-4:checked ~ .tabs__control label[for="tab-4"],
+#tab-5:checked ~ .tabs__control label[for="tab-5"] {
+  background: linear-gradient(138.15deg, #FFC341 20.46%, #FFD701 65.31%);
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.tabs__item-label {
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  padding: 25px 0;
+  position: relative;
+
+  /*   &::after {
+    @include pseudo;
+    top: 0;
+    right: -34px;
+    width: 0;
+    height: 0;
+    border: 34px solid #ffffff;
+    border-left-color: #FFD701;
+  } */
+}
+
+.tabs__item-input:checked ~ .tabs__item-label {
+
+  &::after {
+    @include pseudo;
+    top: 0;
+    right: -34px;
+    width: 0;
+    height: 0;
+    border: 34px solid #ffffff;
+    border-left-color: #FFD701;
+  }
+}
+
+.tabs__description {
+  width: 560px;
+  display: none;
+}
+
+.tabs__description-title {
+  font-family: $font-montserrat;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+  color: #1FC0FC;
+  margin-top: 0;
+}
+
+.tabs__description-text {
+  font-family: $font-firasans;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 170%;
+  color: #484848;
+  opacity: 0.87;
+
+  &--mini {
+    width: 500px;
+  }
+}
+
+.tabs__item-input[id="tab-1"]:checked ~ .tabs__descriptions > #tab-1,
+.tabs__item-input[id="tab-2"]:checked ~ .tabs__descriptions > #tab-2,
+.tabs__item-input[id="tab-3"]:checked ~ .tabs__descriptions > #tab-3,
+.tabs__item-input[id="tab-4"]:checked ~ .tabs__descriptions > #tab-4,
+.tabs__item-input[id="tab-5"]:checked ~ .tabs__descriptions > #tab-5 {
+  display: block;
+}

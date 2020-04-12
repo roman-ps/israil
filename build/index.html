@@ -46,10 +46,12 @@
     <div class="wrapper">
       <h2 class="about__title title">О программе</h2>
       <p class="about__text">
-        «Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. 
+        «Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.
         <br>В течение освоения программ предусмотрен грант от 4200 до 8400$.
       </p>
-      <div class="about__container"></div>
+      <div class="about__container">
+        <img src="img/about-bg.jpg" width="100%" height="auto">
+      </div>
     </div>
   </section>
 
@@ -58,43 +60,35 @@
       <h2 class="program__title title">Программы</h2>
       <div class="program__container">
         <div class="program__tabs tabs">
-          <div class="tabs__item">
-            <input type="radio" name="tab" id="tab-1" checked="">
-            <label for="tab-1">Общие</label>
+          <input class="tabs__item-input" type="radio" name="tab" id="tab-1" checked="">
+          <input class="tabs__item-input" type="radio" name="tab" id="tab-2">
+          <input class="tabs__item-input" type="radio" name="tab" id="tab-3">
+          <input class="tabs__item-input" type="radio" name="tab" id="tab-4">
+          <input class="tabs__item-input" type="radio" name="tab" id="tab-5">
+          <div class="tabs__control">
+            <label class="tabs__item-label" for="tab-1">Общие</label>
+            <label class="tabs__item-label" for="tab-2">Академические</label>
+            <label class="tabs__item-label" for="tab-3">Стажировки</label>
+            <label class="tabs__item-label" for="tab-4">Волонтёрство</label>
+            <label class="tabs__item-label" for="tab-5">Религиозные</label>
           </div>
-          <div class="tabs__item">
-            <input type="radio" name="tab" id="tab-2">
-            <label for="tab-2">Академические</label>
-          </div>
-          <div class="tabs__item">
-            <input type="radio" name="tab" id="tab-3">
-            <label for="tab-3">Стажировки</label>
-          </div>
-          <div class="tabs__item">
-            <input type="radio" name="tab" id="tab-4">
-            <label for="tab-4">Волонтёрство</label>
-          </div>
-          <div class="tabs__item">
-            <input type="radio" name="tab" id="tab-5">
-            <label for="tab-5">Религиозные</label>
-          </div>
-        </div>
-        <div class="tabs__descriptions">
-          <div class="tabs__description" id="tab-1">
-            <h3 class="tabs__description-title">Общие</h3>
-            <p class="tabs__description-text">
-              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
-            </p>
-            <p class="tabs__description-text">
-              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
-            </p>
-          </div>
-          <div class="tabs__description" id="tab-2">
-            <h3 class="tabs__description-title">Академические</h3>
-            <p class="tabs__description-text">
-              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
-            </p>
-            <p class="tabs__description-text">
+
+          <div class="tabs__descriptions">
+            <div class="tabs__description" id="tab-1">
+              <h3 class="tabs__description-title">Общие</h3>
+              <p class="tabs__description-text">
+                Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
+              </p>
+              <p class="tabs__description-text tabs__description-text--mini">
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+              </p>
+            </div>
+            <div class="tabs__description" id="tab-2">
+              <h3 class="tabs__description-title">Академические</h3>
+              <p class="tabs__description-text">
+                Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
+              </p>
+              <p class="tabs__description-text tabs__description-text--mini">
               Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
             </p>
           </div>
@@ -103,16 +97,16 @@
             <p class="tabs__description-text">
               Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
             </p>
-            <p class="tabs__description-text">
+            <p class="tabs__description-text tabs__description-text--mini">
               Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
             </p>
           </div>
           <div class="tabs__description" id="tab-4">
             <h3 class="tabs__description-title">Волонтёрство</h3>
-            <p class="tabs__description-text">
+            <p class="tabs__description-text ">
               Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
             </p>
-            <p class="tabs__description-text">
+            <p class="tabs__description-text tabs__description-text--mini">
               Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
             </p>
           </div>
@@ -121,12 +115,13 @@
             <p class="tabs__description-text">
               Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
             </p>
-            <p class="tabs__description-text">
+            <p class="tabs__description-text tabs__description-text--mini">
               Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
             </p>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -171,11 +166,13 @@
         Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.
       </p>
       <div class="sliders">
-        <input type="radio" id="slider-1" name="sliders" checked="">
-        <input type="radio" id="slider-2" name="sliders" checked="">
-        <input type="radio" id="slider-3" name="sliders" checked="">
-        <input type="radio" id="slider-4" name="sliders" checked="">
-        <input type="radio" id="slider-5" name="sliders" checked="">
+        <div class="sliders__btn">
+          <input type="radio" id="slider-1" name="sliders" checked="">
+          <input type="radio" id="slider-2" name="sliders" checked="">
+          <input type="radio" id="slider-3" name="sliders" checked="">
+          <input type="radio" id="slider-4" name="sliders" checked="">
+          <input type="radio" id="slider-5" name="sliders" checked="">
+        </div>
         <div class="sliders__control">
           <label for="slider-1"></label>
           <label for="slider-2"></label>
@@ -185,31 +182,31 @@
         </div>
         <ul class="sliders__list">
           <li class="sliders__item">
-            <img src="img/residence-pic_big.jpg" width="482" height="732" alt="Экскурсии">
+            <img class="sliders__item-pic" src="img/residence-pic_big.jpg" width="482" height="732" alt="Экскурсии">
             <p class="sliders__item-text">
               Экскурсии по Израилю и знакомство с его историей
             </p>
           </li>
           <li class="sliders__item">
-            <img src="img/residence-pic_1.jpg" width="211" height="318" alt="Экскурсии">
+            <img class="sliders__item-pic" src="img/residence-pic_1.jpg" width="211" height="318" alt="Экскурсии">
             <p class="sliders__item-text">
               Изучение иврита
             </p>
           </li>
           <li class="sliders__item">
-            <img src="img/residence-pic_2.jpg" width="411" height="318" alt="Экскурсии">
+            <img class="sliders__item-pic" src="img/residence-pic_2.jpg" width="411" height="318" alt="Экскурсии">
             <p class="sliders__item-text">
               Обучение современным навыкам и профессиям
             </p>
           </li>
           <li class="sliders__item">
-            <img src="img/residence-pic_3.jpg" width="411" height="318" alt="Экскурсии">
+            <img class="sliders__item-pic" src="img/residence-pic_3.jpg" width="411" height="318" alt="Экскурсии">
             <p class="sliders__item-text">
               Совместные творческие проекты с израильской молодёжью
             </p>
           </li>
           <li class="sliders__item">
-            <img src="img/residence-pic_4.jpg" width="214" height="318" alt="Экскурсии">
+            <img class="sliders__item-pic" src="img/residence-pic_4.jpg" width="214" height="318" alt="Экскурсии">
             <p class="sliders__item-text">
               Развитие лидерства
             </p>
@@ -325,7 +322,7 @@
       </div>
     </div>
   </section>
-    
+
   <section class="contacts">
     <div class="wrapper">
       <h2 class="contacts__title title">Узнать подробности</h2>
