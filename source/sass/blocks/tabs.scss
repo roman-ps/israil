@@ -14,16 +14,6 @@
 
 .tabs__item-input {
   display: none;
-
-  &::after {
-    top: 0;
-    right: 0;
-    @include pseudo;
-    width: 0;
-    height: 0;
-    border: 68px solid black;
-    border-left: none;
-  }
 }
 
 #tab-1:checked ~ .tabs__control label[for="tab-1"],
@@ -42,29 +32,6 @@
   display: block;
   padding: 25px 0;
   position: relative;
-
-  /*   &::after {
-    @include pseudo;
-    top: 0;
-    right: -34px;
-    width: 0;
-    height: 0;
-    border: 34px solid #ffffff;
-    border-left-color: #FFD701;
-  } */
-}
-
-.tabs__item-input:checked ~ .tabs__item-label {
-
-  &::after {
-    @include pseudo;
-    top: 0;
-    right: -34px;
-    width: 0;
-    height: 0;
-    border: 34px solid #ffffff;
-    border-left-color: #FFD701;
-  }
 }
 
 .tabs__description {
@@ -101,4 +68,18 @@
 .tabs__item-input[id="tab-4"]:checked ~ .tabs__descriptions > #tab-4,
 .tabs__item-input[id="tab-5"]:checked ~ .tabs__descriptions > #tab-5 {
   display: block;
+}
+
+.tabs__item-input[id="tab-1"]:checked ~ .tabs__control > label[for="tab-1"]::after,
+.tabs__item-input[id="tab-2"]:checked ~ .tabs__control > label[for="tab-2"]::after,
+.tabs__item-input[id="tab-3"]:checked ~ .tabs__control > label[for="tab-3"]::after,
+.tabs__item-input[id="tab-4"]:checked ~ .tabs__control > label[for="tab-4"]::after,
+.tabs__item-input[id="tab-5"]:checked ~ .tabs__control > label[for="tab-5"]::after, {
+  @include pseudo;
+    top: 0;
+    right: -34px;
+    width: 0;
+    height: 0;
+    border: 34px solid #ffffff;
+    border-left-color: #FFD701;
 }
