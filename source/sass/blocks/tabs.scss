@@ -1,6 +1,6 @@
 .tabs {
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
 }
 
 .tabs__control {
@@ -10,6 +10,7 @@
   color: #484848;
   opacity: 0.87;
   width: 228px;
+  margin-right: 64px;
 }
 
 .tabs__item-input {
@@ -37,6 +38,7 @@
 .tabs__description {
   width: 560px;
   display: none;
+  align-self: center;
 }
 
 .tabs__description-title {
@@ -74,7 +76,7 @@
 .tabs__item-input[id="tab-2"]:checked ~ .tabs__control > label[for="tab-2"]::after,
 .tabs__item-input[id="tab-3"]:checked ~ .tabs__control > label[for="tab-3"]::after,
 .tabs__item-input[id="tab-4"]:checked ~ .tabs__control > label[for="tab-4"]::after,
-.tabs__item-input[id="tab-5"]:checked ~ .tabs__control > label[for="tab-5"]::after, {
+.tabs__item-input[id="tab-5"]:checked ~ .tabs__control > label[for="tab-5"]::after {
   @include pseudo;
     top: 0;
     right: -34px;

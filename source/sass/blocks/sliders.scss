@@ -10,18 +10,18 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  height: 732px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: stretch;
+  
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .sliders__item {
   position: relative;
   flex-shrink: 0;
-
+  float: left;
 }
 
 .sliders__item-text {
