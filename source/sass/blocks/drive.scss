@@ -1,0 +1,52 @@
+.drive {
+  padding: 209px 0 131px;
+  background-image: url("../../img/drive-bg.jpg"), url("../../img/drive-bag.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, center left;
+  background-size: auto, auto;
+  font-family: $font-firasans;
+}
+
+.drive .wrapper {
+  padding: 0 304px 0 210px;
+}
+
+.drive__title {
+  margin-bottom: 0;
+}
+
+.drive__description {
+  margin-top: 24px;
+  width: 400px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 170%;
+  color: #484848;
+  opacity: 0.87;
+}
+
+.drive__form {
+  margin-top: 64px;
+  width: 477px;
+  border: 2px solid #E3E3E3;
+  box-sizing: border-box;
+  border-radius: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drive__form-input {
+  line-height: 20px;
+  font-weight: 500;
+  border: none;
+  text-transform: uppercase;
+  padding: 19px 5px 19px 40px;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.drive__btn {
+  width: 216px;
+}

@@ -1,8 +1,16 @@
 .program {
+  padding-top: 102px;
   background-image:  url("../../img/program-bg.jpg");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center right;
   background-size: auto;
   background-color: #ffffff;
-  margin: 50px 0 0;
+}
+
+.program .wrapper {
+  padding: 0 304px 0 210px;
+}
+
+.program__container {
+  margin-top: 82px;
 }
