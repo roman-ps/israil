@@ -1,0 +1,36 @@
+.mention {
+  padding: 120px 0 190px;
+  background-image: url("../../img/mention-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.mention__container {
+  margin-right: auto;
+  margin-left: 680px;
+}
+
+.mention__title {
+  margin-bottom: 0;
+}
+
+.mention__description {
+  margin-top: 24px;
+  width: 380px;
+  font-family: $font-firasans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 170%;
+  color: #FFFFFF;
+  opacity: 0.87;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.mention__btn {
+  display: block;
+  width: 230px;
+  margin-top: 48px;
+  text-decoration: none;
+}
