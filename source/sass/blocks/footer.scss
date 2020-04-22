@@ -1,0 +1,19 @@
+.footer {
+  padding: 24px 0;
+  border-top: 2px solid rgba(72, 72, 72, 0.2);
+}
+
+.footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright {
+  font-family: $font-firasans;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #484848;
+  opacity: 0.5;
+}

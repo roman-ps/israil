@@ -1,0 +1,17 @@
+.social {
+  list-style: none;
+  padding: 0;
+}
+
+.social__item {
+  display: inline-block;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  font-size: 0;
+}
