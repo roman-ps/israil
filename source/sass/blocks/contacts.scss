@@ -1,0 +1,51 @@
+.contacts {
+  margin-top: 81px;
+  padding-bottom: 96px;
+  font-family: $font-firasans;
+}
+
+.contacts__location {
+  padding-left: 18px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: rgba(72, 72, 72, 0.74);
+}
+
+.contacts__city {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-variant: small-caps;
+  display: inline-block;
+  border-bottom: 1px dashed #1FC0FC;
+  margin-left: 16px;
+}
+
+.contacts__curator-container {
+  width: 480px;
+}
+
+.contacts__data {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: rgba(72, 72, 72, 0.74);
+}
+
+.contacts__data-title {
+  color: #1FC0FC;
+}
+
+.contacts__data-address {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  color: rgba(72, 72, 72, 0.74);
+}
+
+.contacts__curator-bottom {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 170%;
+  color: rgba(72, 72, 72, 0.87);
+}
