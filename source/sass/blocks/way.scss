@@ -45,13 +45,13 @@
   opacity: 0.87;
 
   &::before {
-    content: counter(my-counter); 
-    counter-increment: my-counter; 
+    content: counter(my-counter);
+    counter-increment: my-counter;
     color: #FFC341;
-    font-weight: 700; 
+    font-weight: 700;
     font-size: 17px;
     line-height: 170%;
-    margin-right: 24px; 
+    margin-right: 24px;
     width: 36px;
     height: 36px;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
