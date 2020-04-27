@@ -21,13 +21,21 @@
 }
 
 .main-container {
-  background-image:  url("../img/promo-bg.jpg"), url("../img/promo-photo.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom, bottom;
-  background-size: cover, auto;
+  background-image:  url("../img/promo-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
   background-color: #ce9b9b;
 }
 
 .hidden {
   display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

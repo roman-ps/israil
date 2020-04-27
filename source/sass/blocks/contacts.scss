@@ -5,7 +5,7 @@
   background-image: url(../../img/contacts-color_bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: cover;
 }
 
 .contacts .wrapper {
@@ -77,6 +77,16 @@
 .contacts__right-container {
   width: 702px;
   height: 448px;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    width: 18px;
+    height: 28px;
+    background-image: url(../../img/contacts-icon_marker.svg);
+    top: 51%;
+    right: 23%;
+  }
 }
 
 .contacts__bottom-container {
@@ -102,6 +112,7 @@
   line-height: 150%;
   color: rgba(72, 72, 72, 0.5);
 }
+
 .contacts__form-input {
   box-sizing: border-box;
   width: 250px;

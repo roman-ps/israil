@@ -1,6 +1,6 @@
 .about {
-  background-image:  url("../img/about-color_bg.jpg");
-  background-repeat:  no-repeat;
+  background-image: url("../img/about-color_bg.jpg");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #ce9b9b;
@@ -24,12 +24,12 @@
 }
 
 @media #{$desktop} {
-  
-} 
+
+}
 
 @media #{$tablet} {
-  
-} 
+
+}
 
 @media #{$mobile} {
   .about__text {
@@ -37,4 +37,4 @@
     font-size: 16px;
     line-height: 160%;
   }
-} 
+}
