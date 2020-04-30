@@ -1,0 +1,17 @@
+.form-input {
+  box-sizing: border-box;
+  padding: 19px 40px;
+  border-radius: 80px;
+  border: 2px solid #E3E3E3;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  font-variant: small-caps;
+  color: rgba(72, 72, 72, 0.5);
+  text-transform: uppercase;
+
+  &:focus {
+    color: rgba(72, 72, 72, 0.87);
+    border: 2px solid #FFC341;
+  }
+}
