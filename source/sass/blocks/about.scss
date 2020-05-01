@@ -1,9 +1,38 @@
 .about {
-  background-image: url("../img/about-color_bg.jpg");
+  /* background-image: url("../img/about-color_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: #ce9b9b;
+  background-color: #ce9b9b; */
+}
+
+.about .wrapper {
+  background-image: url("../img/about-color_bg.jpg");
+  background-repeat: no-repeat;
+  background-position:  bottom center;
+  background-size: auto;
+  padding: 0 248px 96px;
+}
+
+.about__container {
+  position: relative;
+  width: 870px;
+  height: 460px;
+  margin: 48px auto 0;
+  overflow: hidden;
+  background-image: url("../../img/about-bg.jpg");
+  background-position: left 20% top 29%;
+  mask-image: url("../../img/about-mask.svg");
+
+  &::before {
+    @include pseudo;
+    background-image: url("../../img/about-play.svg");
+    width: 96px;
+    height: 96px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 
 .about__title {

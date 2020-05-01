@@ -1,14 +1,18 @@
 .way {
-  padding: 100px 0 100px;
-  background-image: url("../../img/way-color_bg.jpg");
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: auto;
+  //padding: 100px 0 100px;
+  /* background-image: url("../../img/way-stamp.png"), url("../../img/way-color_bg.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right top, left center;
+  background-size: auto, auto; */
 }
 
 .way .wrapper {
-  padding: 0 131px 0 12px;
+  padding: 100px 131px 100px 0;
   display: flex;
+  background-image: url("../../img/way-stamp.png"), url("../../img/way-color_bg.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right -5% top 45%, left top 30%;
+  background-size: auto, auto;
 }
 
 .way__left {
@@ -18,6 +22,7 @@
   background-repeat: no-repeat;
   background-position: left bottom 25%;
   background-size: auto;
+  mask-image: url("../../img/way-mask.svg");
 }
 
 .way__right {

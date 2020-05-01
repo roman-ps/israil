@@ -1,14 +1,23 @@
 .mention {
-  padding: 120px 0 190px;
+  margin: 96px 0 0;
+  /* padding: 120px 0 190px;
   background-image: url("../../img/mention-bg.jpg");
   background-repeat: no-repeat;
   background-position: top left;
-  background-size: cover;
+  background-size: cover; */
+}
+
+.mention .wrapper {
+  padding: 90px 0 190px;
+  background-image: url("../../img/mention-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 }
 
 .mention__container {
   margin-right: auto;
-  margin-left: 680px;
+  margin-left: 794px;
 }
 
 .mention__title {

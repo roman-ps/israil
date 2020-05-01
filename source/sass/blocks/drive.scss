@@ -1,14 +1,18 @@
 .drive {
-  padding: 209px 0 131px;
-  background-image: url("../../img/drive-bg.jpg"), url("../../img/drive-bag.png");
+  /* background-image: url("../../img/drive-bg.jpg"), url("../../img/drive-bag.png");
   background-repeat: no-repeat, no-repeat;
   background-position: top right, center left;
-  background-size: auto, auto;
+  background-size: auto, auto; */
   font-family: $font-firasans;
 }
 
 .drive .wrapper {
-  padding: 0 304px 0 210px;
+  background-image: url("../../img/drive-bg.jpg"), url("../../img/drive-bag.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, center left;
+  background-size: auto, auto;
+  padding: 209px 0 131px 210px;
+  padding-left: 210px;
 }
 
 .drive__title {

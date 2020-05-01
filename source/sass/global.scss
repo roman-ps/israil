@@ -1,31 +1,32 @@
 .wrapper {
   width: 1366px;
   margin: 0 auto;
-  padding: 0 110px;
+  //padding: 0 110px;
   box-sizing: border-box;
 
   @media #{$desktop} {
     width: 1024px;
-    padding: 0 15px;
+    //padding: 0 15px;
   }
 
   @media #{$tablet} {
     width: 768px;
-    padding: 0 30px;
+    //padding: 0 30px;
   }
 
   @media #{$mobile} {
     width: 320px;
-    padding: 0 16px;
+    //padding: 0 16px;
   }
 }
 
-.main-container {
+.main-container .wrapper {
   background-image:  url("../img/promo-bg.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  background-color: #ce9b9b;
+  //background-color: #ce9b9b;
+  padding: 0 114px 0 110px;
 }
 
 .hidden {

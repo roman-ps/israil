@@ -1,18 +1,22 @@
 .contacts {
-  margin-top: 81px;
-  padding-bottom: 96px;
+  margin: 90px 0 0;
   font-family: $font-firasans;
-  background-image: url(../../img/contacts-color_bg.jpg);
+  /* background-image: url(../../img/contacts-color_bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .contacts .wrapper {
-  padding: 0 0 0 110px;
+  padding-left: 110px;
+  padding-bottom: 96px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-image: url(../../img/contacts-color_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
 }
 
 .contacts__title {
