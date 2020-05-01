@@ -15,3 +15,33 @@
     border: 2px solid #FFC341;
   }
 }
+
+.form input[type="checkbox"] {
+  display: none;
+}
+
+.form input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.form input[type="checkbox"] + label::before {
+  @include pseudo;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 2px solid #FFC341;
+  top: 0;
+  left: 0;
+}
+
+.form input[type="checkbox"]:checked + label::after {
+  @include pseudo;
+  background-image: url("../../img/form-checking.svg");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  top: 1px;
+  left: 1px;
+}

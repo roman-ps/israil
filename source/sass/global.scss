@@ -27,6 +27,10 @@
   background-size: cover;
   //background-color: #ce9b9b;
   padding: 0 114px 0 110px;
+
+  @media #{$desktop} {
+    padding: 0 35px;
+  }
 }
 
 .hidden {
