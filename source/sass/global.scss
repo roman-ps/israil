@@ -20,16 +20,21 @@
   }
 }
 
-.main-container .wrapper {
+.main-container {
   background-image:  url("../img/promo-bg.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   background-size: cover;
-  //background-color: #ce9b9b;
+}
+
+.main-container .wrapper {
   padding: 0 114px 0 110px;
 
   @media #{$desktop} {
-    padding: 0 35px;
+
+    .main-container .wrapper {
+      padding: 0 30px 0 30px;
+    }
   }
 }
 

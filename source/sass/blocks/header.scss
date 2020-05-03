@@ -1,5 +1,5 @@
 .header {
-  padding: 32px 0 0;
+  padding: 28px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +16,12 @@
 .header__callback {
   @include link-standart;
   border-bottom: 1px dashed #000000;
-  font-variant: small-caps;
+  text-transform: uppercase;
+  //font-variant: small-caps;
+}
+
+.header__logo {
+  margin-right: 40px;
 }
 
 @media #{$mobile} {

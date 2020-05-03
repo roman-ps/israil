@@ -10,12 +10,33 @@
 .program .wrapper {
   background-image:  url("../../img/program-bg.jpg");
   background-repeat: no-repeat;
-  background-position: top 50% right;
+  background-position: top 44% right;
   background-size: auto;
   background-color: #ffffff;
-  padding: 70px 304px 0 210px;
+  padding: 72px 304px 0 210px;
 }
 
 .program__container {
-  margin-top: 82px;
+  margin-top: 74px;
+}
+
+.program__tabs {
+  margin-top: 69px;
+}
+
+@media #{$desktop} {
+
+  .program .wrapper {
+    padding: 70px 80px 0;
+    background-position: center right;
+  }
+
+  .program__title {
+    text-align: center;
+  }
+
+  .program__container {
+
+  }
+
 }

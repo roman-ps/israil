@@ -8,6 +8,13 @@
   color: #1FC0FC;
 }
 
+@media #{$desktop} {
+  .title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
 @media #{$tablet} {
   .title {
     font-size: 32px;

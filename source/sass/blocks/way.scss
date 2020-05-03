@@ -7,8 +7,9 @@
 }
 
 .way .wrapper {
-  padding: 100px 131px 100px 0;
+  padding: 155px 131px 100px 12px;
   display: flex;
+  justify-content: space-between;
   background-image: url("../../img/way-stamp.png"), url("../../img/way-color_bg.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: right -5% top 45%, left top 30%;
@@ -18,21 +19,28 @@
 .way__left {
   width: 581px;
   height: 707px;
+  //margin-right: 56px;
   background-image: url("../../img/way-bg.jpg");
   background-repeat: no-repeat;
-  background-position: left bottom 25%;
+  background-position: left -12px bottom 32%;
   background-size: auto;
   mask-image: url("../../img/way-mask.svg");
 }
 
 .way__right {
-  width: 522px;
-  margin-left: auto;
+  width: 536px;
+  //padding-left: 16px;
   font-family: $font-firasans;
   color: #484848;
 }
 
+.way__title {
+  margin-bottom: 0;
+}
+
 .way__description {
+  margin-top: 27px;
+  width: 480px;
   font-weight: 400;
   font-size: 15px;
   line-height: 170%;
@@ -40,24 +48,29 @@
 }
 
 .way__important {
+  margin-top: 34px;
   display: block;
-  width: 480px;
+  width: 460px;
   font-size: 17px;
   line-height: 170%;
   font-weight: 700;
 }
 
 .way__list {
+  width: 480px;
   padding: 0;
-  margin-top: 24px;
+  margin-top: 33px;
   list-style-type: none;
   counter-reset: my-counter;
 }
 
 .way__item {
-  margin-bottom: 45px;
+  margin-bottom: 39px;
+  padding: 7px 0 8px 44px;
   //display: flex;
   //align-items: center;
+  min-height: 36px;
+  box-sizing: border-box;
   position: relative;
   font-size: 15px;
   line-height: 140%;
@@ -81,6 +94,9 @@
     background-color: #ffffff;
     text-align: center;
     border-radius: 50%;
+    position: absolute;
+    left: -16px;
+    top: -9px;
    }
 
    &::after {
@@ -88,8 +104,9 @@
      width: 0px;
      height: 40px;
      border: 1px dashed #484848;
-     top: 41px;
-     left: 17px;
+     top: 35px;
+     left: 0px;
+     opacity: 0.2;
    }
 
    &:last-child {
@@ -115,5 +132,34 @@
     background: linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
     top: 0;
     left: -15px;
+  }
+}
+
+@media #{$desktop} {
+
+  .way .wrapper {
+    padding: 50px 20px 50px;
+    background-image: url("../../img/way-stamp.png");
+    background-repeat: no-repeat;
+    background-position: right 7% top 45%;
+    background-size: auto;
+  }
+
+  .way__title {
+    text-align: center;
+  }
+
+  .way__left {
+    display: none;
+  }
+
+  .way__right {
+    margin: 0 auto;
+    width: auto;
+    padding: 0 2%;
+  }
+
+  .way__important {
+    width: auto;
   }
 }

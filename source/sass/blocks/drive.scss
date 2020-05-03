@@ -9,9 +9,9 @@
 .drive .wrapper {
   background-image: url("../../img/drive-bg.jpg"), url("../../img/drive-bag.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: top right, center left;
+  background-position: top 8px right, top 144px left;
   background-size: auto, auto;
-  padding: 209px 0 131px 210px;
+  padding: 185px 0 131px 210px;
   padding-left: 210px;
 }
 
@@ -53,4 +53,25 @@
 
 .drive__btn {
   width: 216px;
+}
+
+@media #{$desktop} {
+
+  .drive .wrapper {
+    padding: 50px 50px 570px 50px;
+    background-position: bottom center, top 15% left;
+  }
+
+  .drive__title {
+    text-align: center;
+  }
+
+  .drive__description {
+    text-align: center;
+    width: auto;
+  }
+
+  .drive__form {
+    margin: 40px auto 0;
+  }
 }

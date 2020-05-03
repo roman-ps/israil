@@ -6,8 +6,7 @@
   font-family: $font-firasans;
   font-size: 15px;
   line-height: 18px;
-  color: #484848;
-  opacity: 0.87;
+  color: rgba(72, 72, 72, 0.87);
   width: 228px;
   margin-right: 64px;
 }
@@ -24,19 +23,23 @@
   background: linear-gradient(138.15deg, #FFC341 20.46%, #FFD701 65.31%);
   color: #ffffff;
   text-transform: uppercase;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 500;
+  font-variant: small-caps;
 }
 
 .tabs__item-label {
   cursor: pointer;
-  //text-align: center;
   display: block;
   padding: 25px 0 24px 72px;
   position: relative;
+  margin-bottom: 5px;
 
   &::before {
     @include pseudo;
-    top: 50%;
-    left: 15px;
+    top: 33px;
+    left: 23px;
     transform: translateY(-50%);
     background-repeat: no-repeat;
   }
@@ -47,7 +50,6 @@
 }
 
 .tabs__item-label--culture {
-
   &::before {
     background-image: url("../../img/program-icon_culture-black.png");
     width: 28px;
@@ -62,7 +64,6 @@
 }
 
 .tabs__item-label--business {
-
   &::before {
     background-image: url("../../img/program-icon_business-black.png");
     width: 36px;
@@ -77,7 +78,6 @@
 }
 
 .tabs__item-label--study {
-
   &::before {
     background-image: url("../../img/program-icon_study-black.png");
     width: 32px;
@@ -92,7 +92,6 @@
 }
 
 .tabs__item-label--volonteur {
-
   &::before {
     background-image: url("../../img/program-icon_volonteur-black.png");
     width: 32px;
@@ -107,7 +106,6 @@
 }
 
 .tabs__item-label--religion {
-
   &::before {
     background-image: url("../../img/program-icon_religion-black.png");
     width: 23px;
@@ -125,7 +123,6 @@
   display: flex;
 }
 
-
 .tabs__description {
   width: 560px;
   display: none;
@@ -139,7 +136,7 @@
   line-height: 34px;
   letter-spacing: -0.02em;
   color: #1FC0FC;
-  margin-top: 0;
+  margin: 18px 0 25px;
 }
 
 .tabs__description-text {
@@ -147,11 +144,12 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 170%;
-  color: #484848;
-  opacity: 0.87;
+  color: rgba(72, 72, 72, 0.87);
+  padding-right: 6px;
 
   &--mini {
-    width: 500px;
+    width: 507px;
+    margin: 19px 0 0;
   }
 }
 

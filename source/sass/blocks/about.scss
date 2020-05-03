@@ -21,7 +21,7 @@
   margin: 48px auto 0;
   overflow: hidden;
   background-image: url("../../img/about-bg.jpg");
-  background-position: left 20% top 29%;
+  background-position: left 20% top 30%;
   mask-image: url("../../img/about-mask.svg");
 
   &::before {
@@ -29,7 +29,7 @@
     background-image: url("../../img/about-play.svg");
     width: 96px;
     height: 96px;
-    top: 50%;
+    top: 39%;
     left: 50%;
     transform: translate(-50%);
   }
@@ -49,10 +49,14 @@
   text-align: center;
   color: #484848;
   width: 700px;
-  margin: 24px auto 0;
+  margin: -10px auto 0;
 }
 
 @media #{$desktop} {
+
+  .about .wrapper {
+    padding: 0 20px 0px;
+  }
 
 }
 
