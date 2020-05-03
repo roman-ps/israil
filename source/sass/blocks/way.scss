@@ -59,69 +59,51 @@
 .way__list {
   width: 480px;
   padding: 0;
-  margin-top: 33px;
-  list-style-type: none;
-  counter-reset: my-counter;
+  margin-top: 26px;
 }
 
 .way__item {
-  margin-bottom: 39px;
-  padding: 7px 0 8px 44px;
-  //display: flex;
-  //align-items: center;
-  min-height: 36px;
   box-sizing: border-box;
-  position: relative;
+  width: 451px;
+  margin-bottom: 38px;
+  display: flex;
+  align-items: center;
+  min-height: 36px;
   font-size: 15px;
   line-height: 140%;
   color: rgba(72, 72, 72, 0.87);
+}
+
+.way__item-number {
+  position: relative;
+  margin-right: 35px;
+  display: block;
+  color: #FFC341;
+  font-weight: 700;
+  font-size: 17px;
+  z-index: 1;
 
   &::before {
-    float: left;
-    display: block;
-    box-sizing: border-box;
-    content: counter(my-counter);
-    counter-increment: my-counter;
-    color: #FFC341;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 170%;
+    @include pseudo;
+    z-index: -1;
     margin-right: 24px;
     width: 36px;
     height: 36px;
-    padding-top: 5px;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-    text-align: center;
     border-radius: 50%;
-    position: absolute;
-    left: -16px;
-    top: -9px;
-   }
-
-   &::after {
-     @include pseudo;
-     width: 0px;
-     height: 40px;
-     border: 1px dashed #484848;
-     top: 35px;
-     left: 0px;
-     opacity: 0.2;
-   }
-
-   &:last-child {
-     &::after {
-       border: none;
-     }
-   }
+    left: -14px;
+    top: -8px;
+  }
 }
 
 .way__note {
+  margin-top: 48px;
   width: 520px;
   height: 42px;
   font-size: 15px;
   line-height: 140%;
-  margin-left: 30px;
+  margin-left: 15px;
   opacity: 0.5;
   position: relative;
 
