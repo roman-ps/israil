@@ -1,23 +1,23 @@
 .mention {
-  margin: 96px 0 0;
-  /* padding: 120px 0 190px;
+  margin: 75px 0 0;
+  //padding: 120px 0 190px;
   background-image: url("../../img/mention-bg.jpg");
   background-repeat: no-repeat;
   background-position: top left;
-  background-size: cover; */
+  background-size: cover;
 }
 
 .mention .wrapper {
-  padding: 90px 0 190px;
-  background-image: url("../../img/mention-bg.jpg");
+  padding: 90px 167px 196px 0;
+  /* background-image: url("../../img/mention-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: auto; */
 }
 
 .mention__container {
-  margin-right: auto;
-  margin-left: 794px;
+  width: 402px;
+  margin-left: auto;
 }
 
 .mention__title {
@@ -26,21 +26,49 @@
 
 .mention__description {
   margin-top: 24px;
-  width: 380px;
+  width: 390px;
   font-family: $font-firasans;
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 17px;
   line-height: 170%;
-  color: #FFFFFF;
-  opacity: 0.87;
+  color: rgba(255, 255, 255, 0.87);
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
 }
 
 .mention__btn {
+  position: relative;
   display: block;
   width: 230px;
-  margin-top: 48px;
+  margin-top: 51px;
+  padding-left: 35px;
   text-decoration: none;
-  cursor: pointer;
+  font-variant: small-caps;
+
+  &::before {
+    @include pseudo;
+    background-image: url("../../img/social-icon_instagram.svg");
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 39px;
+    transform: translateY(-50%);
+  }
+}
+
+@media #{$desktop} {
+  .mention {
+    background-position: center;
+  }
+
+  .mention .wrapper {
+    padding-right: 12%;
+  }
+
+  .mention__container {
+    width: 30%;
+  }
+
+  .mention__description {
+    width: 100%;
+  }
 }

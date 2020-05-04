@@ -1,9 +1,10 @@
 .footer {
-  padding: 24px 0;
+  padding: 10px 0 0;
   border-top: 2px solid rgba(72, 72, 72, 0.2);
 }
 
 .footer .wrapper {
+  padding: 0 114px 0 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,4 +17,8 @@
   line-height: 150%;
   color: #484848;
   opacity: 0.5;
+}
+
+.footer__social .social__item {
+  margin-right: 16px;
 }

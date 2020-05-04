@@ -1,20 +1,33 @@
 .faq {
-  margin-top: 57px;
-  //padding-bottom: 100px;
-  /* background-image: url(../../img/faq-bag.png), url(../../img/faq-color_bg.jpg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: left bottom, top;
-  background-size: auto, cover; */
+  margin-top: 25px;
 }
 
 .faq .wrapper {
-  padding: 79px 0 80px 110px;
+  padding: 113px 0 100px 110px;
   display: flex;
   justify-content: space-between;
   background-image: url(../../img/faq-bag.png), url(../../img/faq-color_bg.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: left bottom, top;
   background-size: auto, cover;
+}
+
+.faq__left {
+  width: 44.58%;
+}
+
+.faq__title {
+  margin-top: 0;
+}
+
+.faq__right {
+  width: 51.35%;
+  height: 803px;
+  overflow: hidden;
+  background-image: url("../../img/faq-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right top -13px;
+  mask-image: url("../../img/faq-mask.svg");
 }
 
 .faq__list {
@@ -25,42 +38,57 @@
 .faq__list-item {
   font-family: $font-firasans;
   width: 560px;
+  min-height: 72px;
   border-bottom: 1px solid rgba(72, 72, 72, 0.2);
   position: relative;
   padding-right: 160px;
   box-sizing: border-box;
-  min-height: 72px;
   margin-top: 24px;
 
   &:hover {
     cursor: pointer;
   }
 
-  &::before {
-    @include pseudo;
-    width: 2px;
-    height: 15px;
-    background-color: #1FC0FC;
-    top: 20px;
-    right: 35px;
-    transform: rotate(45deg)
-  }
+  &::before,
   &::after {
     @include pseudo;
     width: 2px;
-    height: 15px;
+    height: 11px;
     background-color: #1FC0FC;
     top: 20px;
-    right: 45px;
+  }
+  &::before {
+    right: 42px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    right: 48px;
     transform: rotate(-45deg)
+  }
+
+  &--high {
+    min-height: 89px;
   }
 }
 
 .faq__list-title {
+  display: flex;
+  align-items: baseline;
   font-weight: 400;
   font-size: 17px;
   line-height: 150%;
   color: #484848;
+}
+
+.faq__list-description {
+  width: 480px;
+  align-items: baseline;
+  margin-bottom: 29px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: rgba(72, 72, 72, 0.74);
 }
 
 .faq__list-number {
@@ -72,12 +100,8 @@
   color: #FFC341;
 }
 
-.faq__right {
-  width: 645px;
-  height: 803px;
-  overflow: hidden;
-  background-image: url("../../img/faq-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: right;
-  mask-image: url("../../img/faq-mask.svg");
+@media #{$desktop} {
+  .faq__list-item {
+
+  }
 }

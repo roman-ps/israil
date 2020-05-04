@@ -44,7 +44,9 @@
   font-weight: 500;
   border: none;
   text-transform: uppercase;
-  padding: 19px 5px 19px 40px;
+  padding: 19px 40px 19px 40px;
+  color: #484848;
+  opacity: 0.5;
 
   &:focus {
     outline: 0;

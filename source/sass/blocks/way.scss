@@ -12,14 +12,13 @@
   justify-content: space-between;
   background-image: url("../../img/way-stamp.png"), url("../../img/way-color_bg.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: right -5% top 45%, left top 30%;
+  background-position: right top 52%, left top 30%;
   background-size: auto, auto;
 }
 
 .way__left {
   width: 581px;
   height: 707px;
-  //margin-right: 56px;
   background-image: url("../../img/way-bg.jpg");
   background-repeat: no-repeat;
   background-position: left -12px bottom 32%;
@@ -29,7 +28,6 @@
 
 .way__right {
   width: 536px;
-  //padding-left: 16px;
   font-family: $font-firasans;
   color: #484848;
 }
@@ -104,7 +102,7 @@
   font-size: 15px;
   line-height: 140%;
   margin-left: 15px;
-  opacity: 0.5;
+  color: rgba(72, 72, 72, 0.5);
   position: relative;
 
   &::before {
