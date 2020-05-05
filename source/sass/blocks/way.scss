@@ -21,9 +21,15 @@
   height: 707px;
   background-image: url("../../img/way-bg.jpg");
   background-repeat: no-repeat;
-  background-position: left -12px bottom 32%;
-  background-size: auto;
+  //background-position: left -12px bottom 32%;
+  //background-size: auto;
   mask-image: url("../../img/way-mask.svg");
+}
+
+.way__left-pic {
+  left: -11px;
+  top: -189px;
+  position: relative;
 }
 
 .way__right {

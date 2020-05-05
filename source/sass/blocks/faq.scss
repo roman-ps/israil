@@ -24,10 +24,16 @@
   width: 51.35%;
   height: 803px;
   overflow: hidden;
-  background-image: url("../../img/faq-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: right top -13px;
+  //background-image: url("../../img/faq-bg.jpg");
+  //background-repeat: no-repeat;
+  //background-position: right top -13px;
   mask-image: url("../../img/faq-mask.svg");
+}
+
+.faq__right-pic {
+  left: -502px;
+  top: -14px;
+  position: relative;
 }
 
 .faq__list {

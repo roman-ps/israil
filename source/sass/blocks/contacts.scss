@@ -1,10 +1,6 @@
 .contacts {
   margin: 90px 0 0;
   font-family: $font-firasans;
-  /* background-image: url(../../img/contacts-color_bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
 }
 
 .contacts .wrapper {
@@ -23,21 +19,42 @@
 }
 
 .contacts__location {
+  position: relative;
   margin-top: 51px;
   padding-left: 22px;
   font-weight: 400;
   font-size: 15px;
   line-height: 150%;
   color: rgba(72, 72, 72, 0.74);
+
+  &::before {
+    @include pseudo;
+    background-image: url("../../img/contacts-icon_marker-light.svg");
+    width: 12px;
+    height: 18px;
+    top: 0;
+    left: 4px;
+  }
 }
 
 .contacts__city {
+  position: relative;
   text-transform: uppercase;
   font-weight: 500;
   font-variant: small-caps;
   display: inline-block;
   border-bottom: 1px dashed #1FC0FC;
   margin-left: 13px;
+
+  &::after {
+    @include pseudo;
+    background-image: url("../../img/icon-gps.svg");
+    width: 16px;
+    height: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+  }
 }
 
 .contacts__curator-container {
@@ -93,14 +110,15 @@
   width: 702px;
   height: 448px;
   position: relative;
+  margin-top: 7px;
 
   &::before {
     @include pseudo;
     width: 18px;
     height: 28px;
     background-image: url(../../img/contacts-icon_marker.svg);
-    top: 52%;
-    right: 23.5%;
+    top: 51%;
+    right: 24%;
   }
 }
 
@@ -109,7 +127,7 @@
 }
 
 .contacts__bottom-container {
-  margin-top: 70px;
+  margin-top: 62px;
   display: flex;
 }
 

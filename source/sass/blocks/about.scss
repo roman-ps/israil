@@ -20,8 +20,8 @@
   height: 460px;
   margin: 48px auto 0;
   overflow: hidden;
-  background-image: url("../../img/about-bg.jpg");
-  background-position: left 20% top 30%;
+  //background-image: url("../../img/about-bg.jpg");
+  //background-position: left 20% top 30%;
   mask-image: url("../../img/about-mask.svg");
 
   &::before {
@@ -33,6 +33,13 @@
     left: 50%;
     transform: translate(-50%);
   }
+}
+
+.about__container-pic {
+  left: -64px;
+  top: -127px;
+  position: relative;
+  z-index: -1;
 }
 
 .about__title {

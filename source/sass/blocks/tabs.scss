@@ -3,12 +3,9 @@
 }
 
 .tabs__control {
-  font-family: $font-firasans;
-  font-size: 15px;
-  line-height: 18px;
-  color: rgba(72, 72, 72, 0.87);
   width: 228px;
   margin-right: 64px;
+  font-family: $font-firasans;
 }
 
 .tabs__item-input {
@@ -35,6 +32,10 @@
   padding: 25px 0 24px 72px;
   position: relative;
   margin-bottom: 5px;
+  opacity: 0.87;
+  color: #484848;
+  font-size: 15px;
+  line-height: 18px;
 
   &::before {
     @include pseudo;
