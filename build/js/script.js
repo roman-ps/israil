@@ -1,34 +1,50 @@
 'use strict';
 
-const CALLBACK = document.querySelector(".header__callback");
+const ESC_KEYCODE = 27;
+const BTN_CALLBACK = document.querySelector(".header__callback");
+const BTN_DONE = document.querySelector(".drive__btn");
+const BTN_DONE_FORM = document.querySelector(".contacts__btn");
+const POPUP = document.querySelector(".popup");
 const POPUP_DONE = document.querySelector(".popup--done");
 const POPUP_REQUEST = document.querySelector(".popup--request");
 const POPUP_CLOSE = document.querySelector(".popup__close");
+const POPUP_OVERLAY = document.querySelector(".popup__overlay");
 
 function openPopupRequest(evt) {
-  evt.preventDefault();
-  if (POPUP_REQUEST.classList.contains("hidden")) {
-    POPUP_REQUEST.classList.remove("hidden");
-    document.body.style.opacity = "0.95";
-    document.body.style.background = "#EBEBEB";
-  }
+  evt.preventDefault;
+  POPUP_REQUEST.classList.remove("hidden");
+  POPUP_OVERLAY.classList.remove("hidden");
 }
 
-function hidden(evt) {
-  evt.preventDefault();
-  evt.currentTarget.classList.toggle("hidden");
+function openPopupDone(evt) {
+  evt.preventDefault;
+  POPUP_DONE.classList.remove("hidden");
+}
+
+function closePopupRequest(evt) {
+  evt.preventDefault;
+  POPUP_REQUEST.classList.add("hidden");
+  POPUP_OVERLAY.classList.add("hidden");
+}
+
+function closePopupDone(evt) {
+  evt.preventDefault;
+  POPUP_DONE.classList.add("hidden");
 }
 
 function closePopup(evt) {
-  evt.preventDefault();
+  evt.preventDefault;
   let child = evt.target;
   let parent = evt.currentTarget;
-  console.log(child);
-  console.log(parent);
-  /* if (child != parent) {
-    if (child.classList.contains)
-  } */
+  if (child.classList.contains("popup__close")) {parent.classList.toggle("hidden")}
+  POPUP_OVERLAY.classList.add("hidden");
 }
 
-CALLBACK.addEventListener("click", openPopupRequest);
-POPUP_REQUEST.addEventListener("click", closePopup);
+function events() {
+  BTN_CALLBACK.addEventListener("click", openPopupRequest);
+  BTN_DONE.addEventListener("click", openPopupDone);
+  BTN_DONE_FORM.addEventListener("click", openPopupDone);
+  POPUP.addEventListener("click", closePopup);
+}
+
+events();
