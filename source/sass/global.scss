@@ -1,42 +1,19 @@
 .wrapper {
-  width: 1366px;
+  max-width: 1142px;
   margin: 0 auto;
-  box-sizing: border-box;
-
-  @media #{$desktop} {
-    width: 1024px;
-  }
-
-  @media #{$tablet} {
-    width: 768px;
-  }
-
-  @media #{$mobile} {
-    width: 320px;
-    padding: 0 16px;
-  }
+  overflow: hidden;
 }
 
 .main-container {
   background-image:  url("../img/promo-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-}
-
-.main-container .wrapper {
-  padding: 0 114px 0 110px;
-
-  @media #{$desktop} {
-    padding: 0 10px;
-  }
-
-  @media #{$tablet} {
-    padding: 0 25px;
-  }
+  background-size: auto 100%;
 
   @media #{$mobile} {
-    padding: 0 16px;
+    background-image: url("../img/promo-bg-m.jpg");
+    background-position: center top 24px;
+    background-size: auto 100%;
   }
 }
 
