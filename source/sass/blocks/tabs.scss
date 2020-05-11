@@ -17,13 +17,14 @@
 #tab-3:checked ~ .tabs__control label[for="tab-3"],
 #tab-4:checked ~ .tabs__control label[for="tab-4"],
 #tab-5:checked ~ .tabs__control label[for="tab-5"] {
-  background: linear-gradient(138.15deg, #FFC341 20.46%, #FFD701 65.31%);
+  background: $gradient;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19px;
-  font-weight: 500;
-  font-variant: small-caps;
+  font-weight: 400;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  opacity: 1;
 }
 
 .tabs__item-label {
@@ -33,14 +34,15 @@
   position: relative;
   margin-bottom: 5px;
   opacity: 0.87;
-  color: #484848;
+  color: $color-black;
   font-size: 15px;
   line-height: 18px;
+  box-sizing: border-box;
 
   &::before {
     @include pseudo;
     top: 33px;
-    left: 23px;
+    left: 22px;
     transform: translateY(-50%);
     background-repeat: no-repeat;
   }
@@ -124,19 +126,18 @@
   display: flex;
 }
 
+.tabs__descriptions {
+  width: 53.6%;
+}
+
 .tabs__description {
-  width: 560px;
+  //width: 560px;
   display: none;
   align-self: center;
 }
 
 .tabs__description-title {
-  font-family: $font-montserrat;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 34px;
-  letter-spacing: -0.02em;
-  color: #1FC0FC;
+  @include h3;
   margin: 18px 0 25px;
 }
 
@@ -149,7 +150,7 @@
   padding-right: 6px;
 
   &--mini {
-    width: 507px;
+    width: 90.7%;
     margin: 19px 0 0;
   }
 }
@@ -194,4 +195,75 @@
 
 .tabs__item-input[id="tab-5"]:checked ~ .tabs__control > label[for="tab-5"]::before {
   background-image: url("../../img/program-icon_religion-white.png");
+}
+
+@media #{$tablet} {
+  .tabs__description-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+@media #{$mobile} {
+  .tabs__control {
+    margin-right: 0;
+    width: auto;
+    display: flex;
+    align-content: center;
+    transform: translateX(-43px);
+  }
+
+  .tabs__item-label {
+    //width: 181px;
+    min-height: 48px;
+    margin: 0 0 0;
+    padding: 15px 12px 14px 52px;
+    border-radius: 60px;
+    opacity: 0.4;
+
+    &::before {
+      width: 32px;
+      height: 32px;
+      top: 23px;
+      left: 15px;
+    }
+  }
+
+  .tabs__item-input[id="tab-1"]:checked ~ .tabs__control > label[for="tab-1"]::after,
+  .tabs__item-input[id="tab-2"]:checked ~ .tabs__control > label[for="tab-2"]::after,
+  .tabs__item-input[id="tab-3"]:checked ~ .tabs__control > label[for="tab-3"]::after,
+  .tabs__item-input[id="tab-4"]:checked ~ .tabs__control > label[for="tab-4"]::after,
+  .tabs__item-input[id="tab-5"]:checked ~ .tabs__control > label[for="tab-5"]::after {
+    border: none;
+  }
+
+  .tabs__descriptions {
+    width: 100%;
+  }
+
+  .tabs__description {
+    width: auto;
+    padding: 0 5%;
+  }
+
+  .tabs__description-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .tabs__description-text {
+    font-size: 14px;
+    line-height: 160%;
+
+    &--mini {
+      width: auto;
+      padding-right: 0;
+    }
+  }
+
+  .tabs__item-label:nth-child(4),
+  .tabs__item-label:nth-child(5) {
+    display: none;
+  }
+
 }
