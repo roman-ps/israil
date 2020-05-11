@@ -1,5 +1,5 @@
 .promo {
-  padding-bottom: 141px;
+  padding-bottom: 135px;
 }
 
 .promo__description {
@@ -15,22 +15,14 @@
 }
 
 .promo__scrolling {
-  margin: 32px auto 0;
+  margin: 30px auto 0;
   width: 76px;
   height: 132px;
 }
 
-@media #{$desktop} {
-
-}
-
-@media #{$tablet} {
-
-}
-
 @media #{$mobile} {
   .promo {
-    padding-bottom: 90px;
+    padding-bottom: 86px;
   }
 
   .promo__description {

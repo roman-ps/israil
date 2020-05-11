@@ -45,16 +45,25 @@
    <section class="about">
     <div class="wrapper">
       <h2 class="about__title title">О программе</h2>
-      <p class="about__text">
-        «Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.
-        <br>В течение освоения программ предусмотрен грант от 4200 до 8400$.
-      </p>
+      <div class="about__text">
+        <p class="about__text-top">
+          «Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.
+        </p>
+        <p class="about__text-bottom">
+          В течение освоения программ предусмотрен грант от 4200 до 8400$.
+        </p>
+      </div>
       <div class="about__container">
-        <img class="about__container-pic" src="img/about-bg.jpg" width="auto" height="auto">
+        <button class="about__play" type="button"></button>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/about-bg.jpg">
+          <source media="(max-width: 767px)" srcset="img/about-bg-m.jpg">
+          <img class="about__pic" src="img/about-bg.jpg" alt="Фото Маса">
+        </picture>
       </div>
     </div>
   </section>
-
+<!--
   <section class="program">
     <div class="wrapper">
       <h2 class="program__title title">Программы</h2>
@@ -421,8 +430,8 @@
       </ul>
     </div>
   </footer>
-
-  <section class="popup popup--request hidden">
+<!--
+   <section class="popup popup--request hidden">
     <div class="popup__wrapper popup__wrapper--request">
       <button class="popup__close" type="button">Закрыть</button>
       <h3 class="popup__title">Заказать звонок</h3>
@@ -451,7 +460,8 @@
       </p>
       <a class="popup__btn btn" href="#">Понятно</a>
     </div>
-  </section> -->
+  </section>
+-->
 
   <script src="js/script.js"></script>
 </body>

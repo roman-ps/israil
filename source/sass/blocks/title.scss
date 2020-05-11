@@ -1,24 +1,11 @@
 .title {
-  font-family: $font-montserrat;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 49px;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: #1FC0FC;
-}
-
-@media #{$desktop} {
-  .title {
-    font-size: 36px;
-    line-height: 42px;
-  }
+  @include h2;
 }
 
 @media #{$tablet} {
   .title {
-    font-size: 32px;
-    line-height: 39px;
+    font-size: 36px;
+    line-height: 42px;
   }
 }
 
