@@ -1,5 +1,5 @@
 .program {
-  padding-top: 69px;
+  padding: 69px 0 59px;
   background-image:  url("../../img/program-bg.jpg");
   background-repeat: no-repeat;
   background-position: top 54px right;
@@ -25,7 +25,7 @@
 
 @media #{$mobile} {
   .program {
-    padding-top: 52px;
+    padding: 52px 0 40px;
     background-size: 100% auto;
     background-position: left 26px top 250px;
   }
