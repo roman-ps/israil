@@ -1,39 +1,32 @@
 .way {
-  //padding: 100px 0 100px;
-  /* background-image: url("../../img/way-stamp.png"), url("../../img/way-color_bg.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: right top, left center;
-  background-size: auto, auto; */
-}
-
-.way .wrapper {
-  padding: 155px 131px 100px 12px;
-  display: flex;
-  justify-content: space-between;
+  padding: 153px 0 0;
   background-image: url("../../img/way-stamp.png"), url("../../img/way-color_bg.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: right top 52%, left top 30%;
+  background-position: top 366px right, center bottom;
   background-size: auto, auto;
 }
 
+.way .wrapper {
+  display: flex;
+  overflow: visible;
+}
+
 .way__left {
-  width: 581px;
+  width: 581px; // 50.8%
   height: 707px;
-  background-image: url("../../img/way-bg.jpg");
-  background-repeat: no-repeat;
-  //background-position: left -12px bottom 32%;
-  //background-size: auto;
+  transform: translateX(-100px);
   mask-image: url("../../img/way-mask.svg");
 }
 
 .way__left-pic {
+  position: relative;
   left: -11px;
   top: -189px;
-  position: relative;
 }
 
 .way__right {
-  width: 536px;
+  width: 536px;//46.9%
+  margin-left: 6px;
   font-family: $font-firasans;
   color: #484848;
 }
@@ -43,7 +36,7 @@
 }
 
 .way__description {
-  margin-top: 27px;
+  margin-top: 25px;
   width: 480px;
   font-weight: 400;
   font-size: 15px;
@@ -57,7 +50,7 @@
   width: 460px;
   font-size: 17px;
   line-height: 170%;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .way__list {
@@ -75,7 +68,8 @@
   min-height: 36px;
   font-size: 15px;
   line-height: 140%;
-  color: rgba(72, 72, 72, 0.87);
+  color: $color-black;
+  opacity: 0.87;
 }
 
 .way__item-number {
@@ -121,31 +115,6 @@
   }
 }
 
-@media #{$desktop} {
+@media #{$tablet} {
 
-  .way .wrapper {
-    padding: 50px 20px 50px;
-    background-image: url("../../img/way-stamp.png");
-    background-repeat: no-repeat;
-    background-position: right 7% top 45%;
-    background-size: auto;
-  }
-
-  .way__title {
-    text-align: center;
-  }
-
-  .way__left {
-    display: none;
-  }
-
-  .way__right {
-    margin: 0 auto;
-    width: auto;
-    padding: 0 2%;
-  }
-
-  .way__important {
-    width: auto;
-  }
 }
