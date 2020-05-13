@@ -1,5 +1,5 @@
 .program {
-  padding: 69px 0 59px;
+  padding: 69px 0 11px;
   background-image:  url("../../img/program-bg.jpg");
   background-repeat: no-repeat;
   background-position: top 54px right;
@@ -17,10 +17,6 @@
 .program__tabs {
   margin-top: 66px;
   padding-left: 99px;
-}
-
-@media #{$tablet} {
-
 }
 
 @media #{$mobile} {

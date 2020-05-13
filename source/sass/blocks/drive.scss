@@ -1,36 +1,32 @@
 .drive {
-  /* background-image: url("../../img/drive-bg.jpg"), url("../../img/drive-bag.png");
+  background-image: url("../../img/drive-bg.jpg"), url("../../img/drive-bag.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: top right, center left;
-  background-size: auto, auto; */
+  background-position: top right, top 135px left;
+  background-size: auto, auto;
+  padding: 209px 0 133px;
   font-family: $font-firasans;
 }
 
 .drive .wrapper {
-  background-image: url("../../img/drive-bg.jpg"), url("../../img/drive-bag.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: top 8px right, top 144px left;
-  background-size: auto, auto;
-  padding: 185px 0 131px 210px;
-  padding-left: 210px;
+
 }
 
 .drive__title {
-  margin-bottom: 0;
+  margin: 0 0 0 98px;
 }
 
 .drive__description {
-  margin-top: 24px;
+  margin: 26px 0 0 98px;
   width: 400px;
   font-weight: 400;
   font-size: 17px;
   line-height: 170%;
-  color: #484848;
+  color: $color-black;
   opacity: 0.87;
 }
 
 .drive__form {
-  margin-top: 64px;
+  margin: 64px 0 0 98px;
   width: 477px;
   border: 2px solid #E3E3E3;
   box-sizing: border-box;
@@ -40,12 +36,13 @@
 }
 
 .drive__form-input {
+  font-size: 14px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 700;
   border: none;
   text-transform: uppercase;
   padding: 19px 40px 19px 40px;
-  color: #484848;
+  color: $color-black;
   opacity: 0.5;
 
   &:focus {
@@ -55,25 +52,31 @@
 
 .drive__btn {
   width: 216px;
+  font-size: 14px;
 }
 
-@media #{$desktop} {
-
-  .drive .wrapper {
-    padding: 50px 50px 570px 50px;
-    background-position: bottom center, top 15% left;
+@media #{$tablet} {
+  .drive {
+    padding: 70px 0 410px;
+    background-position: bottom center, top 60px left;
+    background-size: 600px, auto;
   }
 
-  .drive__title {
+  .drive .wrapper {
     text-align: center;
   }
 
   .drive__description {
-    text-align: center;
     width: auto;
+    margin-left: 0;
   }
 
   .drive__form {
-    margin: 40px auto 0;
+    width: 380px;
+    margin: 24px auto 0;
+  }
+
+  .drive__form-input {
+    padding: 19px 15px 19px 30px;
   }
 }
