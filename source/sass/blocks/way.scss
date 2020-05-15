@@ -1,8 +1,8 @@
 .way {
-  padding: 153px 0 0;
+  padding: 153px 0 303px;
   background-image: url("../../img/way-stamp.png"), url("../../img/way-color_bg.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: top 366px right, center bottom;
+  background-position: top 366px right -121px, center bottom;
   background-size: auto, auto;
 }
 
@@ -15,20 +15,14 @@
   width: 581px; // 50.8%
   height: 707px;
   transform: translateX(-100px);
-  mask-image: url("../../img/way-mask.svg");
-}
-
-.way__left-pic {
-  position: relative;
-  left: -11px;
-  top: -189px;
+  //mask-image: url("../../img/way-mask.svg");
 }
 
 .way__right {
-  width: 536px;//46.9%
+  width: 48.3%; //48.3%;
   margin-left: 6px;
   font-family: $font-firasans;
-  color: #484848;
+  color: $color-black;
 }
 
 .way__title {
@@ -37,31 +31,35 @@
 
 .way__description {
   margin-top: 25px;
-  width: 480px;
+  padding-right: 13%;
+  //width: 86.9%; //480px;
   font-weight: 400;
   font-size: 15px;
   line-height: 170%;
-  color: rgba(72, 72, 72, 0.87);
+  color: $color-black;
+  opacity: 0.87;
 }
 
 .way__important {
   margin-top: 34px;
   display: block;
-  width: 460px;
+  //width: 460px;
+  padding-right: 16.7%;
   font-size: 17px;
   line-height: 170%;
   font-weight: 500;
 }
 
 .way__list {
-  width: 480px;
-  padding: 0;
+  //width: 480px;
+  padding-left: 0;
+  padding-right: 17%;
   margin-top: 26px;
 }
 
 .way__item {
   box-sizing: border-box;
-  width: 451px;
+  //width: 451px;
   margin-bottom: 38px;
   display: flex;
   align-items: center;
@@ -76,7 +74,7 @@
   position: relative;
   margin-right: 35px;
   display: block;
-  color: #FFC341;
+  color: $color-yellow;
   font-weight: 700;
   font-size: 17px;
   z-index: 1;
@@ -97,24 +95,118 @@
 
 .way__note {
   margin-top: 48px;
-  width: 520px;
-  height: 42px;
+  //width: 520px;
+  //height: 42px;
   font-size: 15px;
   line-height: 140%;
   margin-left: 15px;
-  color: rgba(72, 72, 72, 0.5);
+  color: $color-black;
+  opacity: 0.5;
   position: relative;
 
   &::before {
     @include pseudo;
     width: 4px;
-    height: 42px;
-    background: linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
+    height: 100%;
+    background: $gradient;
     top: 0;
     left: -15px;
   }
 }
 
 @media #{$tablet} {
+  .way {
+    padding: 20px 0 50px;
+    background-image: url("../../img/way-stamp.png");
+    background-position: top 366px right -121px;
+  }
+
+    .way__left {
+    display: none;
+  }
+
+  .way__right {
+    width: 100%;
+  }
+
+  .way__title {
+    text-align: center;
+  }
+
+  .way__list {
+    padding-left: 20px;
+  }
+
+  .way__description,
+  .way__important {
+    padding: 0 2%;
+    text-align: center;
+  }
+
+  .way__note {
+    padding-right: 10%;
+  }
+}
+
+@media #{$mobile} {
+  .way {
+    padding: 55px 0;
+    background-image: url("../../img/way-stamp.png");
+    background-size: 264px 199px;
+    background-position: top 354px right -48px;
+  }
+
+  .way__left {
+    display: none;
+  }
+
+  .way__right {
+    width: 100%;
+    font-size: 14px;
+    margin: 0 16px;
+  }
+
+  .way__title {
+    text-align: center;
+  }
+
+  .way__list {
+    padding-right: 0;
+  }
+
+  .way__important {
+    font-size: 16px;
+    line-height: 160%;
+    padding-right: 0;
+    margin-top: 24px;
+  }
+
+  .way__description,
+  .way__item,
+  .way__note {
+    font-size: 14px;
+    line-height: 160%;
+  }
+
+  .way__description {
+    padding-right: 5px;
+  }
+
+  .way__note {
+    margin-top: 25px;
+    margin-left: 8px;
+  }
+
+  .way__item {
+    padding-left: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .way__item-number {
+    margin-right: 30px;
+  }
 
 }
