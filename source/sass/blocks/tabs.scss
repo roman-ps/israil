@@ -131,7 +131,6 @@
 }
 
 .tabs__description {
-  //width: 560px;
   display: none;
   align-self: center;
 }
@@ -214,7 +213,6 @@
   }
 
   .tabs__item-label {
-    //width: 181px;
     min-height: 48px;
     margin: 0 0 0;
     padding: 15px 12px 14px 52px;
@@ -266,5 +264,4 @@
   .tabs__item-label:nth-child(5) {
     display: none;
   }
-
 }

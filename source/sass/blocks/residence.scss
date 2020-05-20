@@ -1,10 +1,10 @@
 .residence {
   margin-top: -205px;
   padding: 30px 0 64px;
-  background-image:  url("../../img/residence-color_bg.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: auto;
+  background-image:  url("../../img/residence-watch.png"), url("../../img/residence-color_bg.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom 165px right -35px, center;
+  background-size: auto, auto;
 }
 
 .residence .wrapper {
@@ -33,5 +33,26 @@
 @media #{$tablet} {
   .residence {
     margin-top: -40px;
+    background: #ffffff;
+  }
+}
+
+@media #{$mobile} {
+  .residence {
+    margin-top: 9px;
+    background: #ffffff;
+  }
+
+  .residence .wrapper {
+    padding: 0 16px;
+  }
+
+  .residence__subtitle {
+    width: auto;
+    margin: 24px auto 0;
+    font-size: 16px;
+    line-height: 160%;
+    transform: none;
+    text-align: left;
   }
 }
