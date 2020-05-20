@@ -1,23 +1,15 @@
 .mention {
-  margin: 75px 0 0;
-  //padding: 120px 0 190px;
+  margin: 80px 0 0;
+  padding-bottom: 190px;
   background-image: url("../../img/mention-bg.jpg");
   background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-}
-
-.mention .wrapper {
-  padding: 90px 167px 196px 0;
-  /* background-image: url("../../img/mention-bg.jpg");
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: auto; */
+  background-size: cover;
 }
 
 .mention__container {
   width: 402px;
-  margin-left: auto;
+  margin: 120px 56px 0 auto;
 }
 
 .mention__title {
@@ -25,13 +17,14 @@
 }
 
 .mention__description {
-  margin-top: 24px;
+  margin: 22px 0 0 2px;
   width: 390px;
   font-family: $font-firasans;
   font-weight: 400;
   font-size: 17px;
   line-height: 170%;
-  color: rgba(255, 255, 255, 0.87);
+  color: #ffffff;
+  opacity: 0.87;
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
 }
 
@@ -42,7 +35,8 @@
   margin-top: 51px;
   padding-left: 35px;
   text-decoration: none;
-  font-variant: small-caps;
+  font-size: 14px;
+  letter-spacing: 0.02em;
 
   &::before {
     @include pseudo;
@@ -55,20 +49,48 @@
   }
 }
 
-@media #{$desktop} {
+@media #{$tablet} {
   .mention {
     background-position: center;
+    background-size: auto;
   }
+}
 
-  .mention .wrapper {
-    padding-right: 12%;
+@media #{$mobile} {
+  .mention {
+    background-image: url("../../img/mention-bg.jpg");
+    background-size: auto 272px;
+    background-position: top 45% left -70px;
+    padding: 0;
+    margin: 0;
   }
 
   .mention__container {
-    width: 30%;
+    margin: 0;
+    width: auto;
+  }
+
+  .mention__title {
+    margin-top: 17px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: -0.02em;
   }
 
   .mention__description {
-    width: 100%;
+    width: 85%;
+    margin: 96px auto 0;
+    font-size: 16px;
+    line-height: 160%;
+  }
+
+  .mention__btn {
+    width: 264px;
+    margin: 59px auto 0;
+
+    &::before {
+      left: 57px;
+    }
   }
 }
