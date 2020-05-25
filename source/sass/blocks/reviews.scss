@@ -141,6 +141,11 @@
 }
 
 @media #{$tablet} {
+  .reviews__item {
+    margin-left: 14px;
+    padding-top: 15px;
+  }
+
   .reviews__place {
     font-size: 14px;
     line-height: 160%;
@@ -149,6 +154,7 @@
   .reviews__quote {
     font-size: 16px;
     line-height: 160%;
+    margin-top: 12px;
   }
 
   .reviews__readmore {
@@ -159,11 +165,63 @@
 
 @media #{$mobile} {
   .reviews {
-
+    padding: 84px 0 0;
+    background-position: top 609px left 28px, left -169px bottom 100px;
+    background-size: 439px 261px, 560px 234px;
   }
 
   .reviews .wrapper {
     flex-direction: column;
-    align-items: center;
+    padding: 24px 16px 0 16px;
+  }
+
+  .reviews__slider {
+    flex-direction: column;
+  }
+
+  .reviews__pic-container {
+    margin: 0 auto;
+  }
+
+  .reviews__item {
+    margin: 54px 0 0;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .reviews__quote {
+    padding-right: 0;
+    margin: 27px 0 0;
+    font-size: 16px;
+    line-height: 160%;
+
+    &--last {
+      margin: 24px 0 29px;
+    }
+  }
+
+  .reviews__social {
+    position: static;
+    margin: 23px 0 0 -4px;
+  }
+
+  .reviews__pagination {
+    left: 112px;
+    bottom: auto;
+    top: 353px;
+  }
+
+  .reviews__place {
+    font-size: 14px;
+    line-height: 160%;
+  }
+
+  .reviews__place-title {
+    display: block;
+  }
+
+  .reviews__readmore {
+    font-size: 16px;
+    line-height: 150%;
   }
 }
