@@ -469,7 +469,7 @@
       </ul>
     </div>
   </section>
-<!--
+
   <section class="contacts">
     <div class="wrapper">
       <div class="contacts__left-container">
@@ -508,11 +508,15 @@
           </div>
         </div>
         <p class="contacts__curator-bottom">
-          Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !
+          Куратор является опытным специалистом агентства Сохнут и&nbsp;знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте&nbsp;подробнее о программах и выберите свою !
         </p>
       </div>
       <div class="contacts__right-container">
-        <img class="contacts__map-pic" src="img/contacts-map.png" width="702" height="448" alt="Карта">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/contacts-map.png">
+          <source media="(max-width: 767px)" srcset="img/contacts-map-m.png">
+          <img class="contacts__map-pic" src="img/contacts-map.png" alt="Карта">
+        </picture>
       </div>
       <div class="contacts__bottom-container">
         <div class="contacts__text">
@@ -531,7 +535,7 @@
       </div>
     </div>
   </section>
-
+<!--
   <footer class="footer">
     <div class="wrapper">
       <a class="footer__logo logo" href="#">Лого

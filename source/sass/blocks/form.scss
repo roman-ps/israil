@@ -7,12 +7,14 @@
   font-size: 17px;
   line-height: 20px;
   font-variant: small-caps;
-  color: rgba(72, 72, 72, 0.5);
+  color: $color-black;
+  opacity: 0.5;
   text-transform: uppercase;
 
   &:focus {
-    color: rgba(72, 72, 72, 0.87);
-    border: 2px solid #FFC341;
+    color: $color-black;
+    opacity: 0.87;
+    border: 2px solid $color-yellow;
   }
 }
 
@@ -31,7 +33,7 @@
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  border: 2px solid #FFC341;
+  border: 2px solid $color-yellow;
   top: 0;
   left: 0;
 }
