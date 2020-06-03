@@ -512,11 +512,7 @@
         </p>
       </div>
       <div class="contacts__right-container">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/contacts-map.png">
-          <source media="(max-width: 767px)" srcset="img/contacts-map-m.png">
-          <img class="contacts__map-pic" src="img/contacts-map.png" alt="Карта">
-        </picture>
+        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Af3c261f74def215e14eaec8bbbc630dbf389290f9ff1f24a88edf6d1a33e23e7&amp;source=constructor" width="100%" height="420" frameborder="0"></iframe>
       </div>
       <div class="contacts__bottom-container">
         <div class="contacts__text">
@@ -535,11 +531,15 @@
       </div>
     </div>
   </section>
-<!--
+
   <footer class="footer">
     <div class="wrapper">
       <a class="footer__logo logo" href="#">Лого
-        <img src="img/logo-footer.png" alt="Israel Journey" width="85" height="27">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-footer.png">
+          <source media="(max-width: 767px)" srcset="img/logo-footer-m.png">
+          <img src="img/logo-footer.png" alt="Israel Journey">
+        </picture>
       </a>
       <p class="footer__copyright">
         Copyright someDesignCompany ©2019
@@ -572,11 +572,11 @@
         Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
       </p>
       <form class="popup__form form" action="#" method="POST">
-        <input class="popup__form-input form-input" type="text" placeholder="Имя" name="name" required>
-        <input class="popup__form-input form-input" type="tel" placeholder="Телефон" name="phone" required>
+        <input class="popup__form-input form-input" type="text" placeholder="Имя" name="name" required="">
+        <input class="popup__form-input form-input" type="tel" placeholder="Телефон" name="phone" required="">
         <button class="popup__btn btn" type="submit">Перезвоните мне</button>
         <div class="checkbox-container">
-          <input class="checkbox-container__input" type="checkbox" id="popup" required></input>
+          <input class="checkbox-container__input" type="checkbox" id="popup" required="">
           <label class="checkbox-container__label" for="popup">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
         </div>
       </form>

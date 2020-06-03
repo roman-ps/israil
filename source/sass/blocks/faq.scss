@@ -145,6 +145,14 @@
 
   .faq__list-item {
     min-height: 64px;
+
+    &::before {
+      right: 3px;
+    }
+
+    &::after {
+      right: 9px;
+    }
   }
 
   .faq__list-title {
