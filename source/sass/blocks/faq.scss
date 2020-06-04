@@ -1,9 +1,10 @@
 .faq {
   margin-top: 55px;
   padding: 90px 0 0px;
-  background-image: url("../../img/faq-bg.jpg"), url("../../img/faq-color_bg.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 100%, top;
+  background-image: url("../../img/faq-color_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  overflow: hidden;
 }
 
 .faq .wrapper {
@@ -16,6 +17,14 @@
     content: url("../../img/faq-bag.png");
     left: -153px;
     bottom: -20px;
+  }
+
+  &::before {
+    @include pseudo;
+    background-image: url("../../img/faq-bg.jpg");
+    width: 645px;
+    height: 803px;
+    right: -112px;
   }
 }
 
@@ -93,7 +102,7 @@
   font-weight: bold;
   font-size: 28px;
   line-height: 170%;
-  color: #FFC341;
+  color: $color-yellow;
 }
 
 @media #{$tablet} {
@@ -107,6 +116,10 @@
     &::after {
       left: -130px;
       bottom: 20px;
+    }
+
+    &::before {
+      background: none;
     }
   }
 
@@ -129,8 +142,12 @@
     padding: 0 16px;
 
     &::after {
-      left: -46px;
+      left: -48px;
       bottom: 54px;
+    }
+
+    &::before {
+      background: none;
     }
   }
 

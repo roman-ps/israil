@@ -4,7 +4,6 @@
   background-image: url("../../img/mention-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
 }
 
 .mention__container {
@@ -58,8 +57,7 @@
 
 @media #{$mobile} {
   .mention {
-    background-image: url("../../img/mention-bg.jpg");
-    background-size: auto 272px;
+    background-image: url("../../img/mention-bg-m.jpg");
     background-position: top 45% left -70px;
     padding: 0;
     margin: 0;

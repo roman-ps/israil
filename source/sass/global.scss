@@ -2,18 +2,22 @@
   max-width: 1142px;
   margin: 0 auto;
   overflow: hidden;
+  //outline: 1px solid red;
+}
+
+body section {
+  //outline: 1px solid green;
 }
 
 .main-container {
   background-image:  url("../img/promo-bg.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
 
   @media #{$mobile} {
     background-image: url("../img/promo-bg-m.jpg");
     background-position: center top 32px;
-    background-size: auto;
+    //background-size: auto;
   }
 }
 

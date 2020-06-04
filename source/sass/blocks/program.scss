@@ -1,9 +1,19 @@
 .program {
   padding: 69px 0 11px;
-  background-image:  url("../../img/program-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: top 54px right;
-  background-size: auto;
+  overflow: hidden;
+}
+
+.program .wrapper {
+  overflow: visible;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    content: url("../../img/program-bg.jpg");
+    top: -49px;
+    right: - 112px;
+    z-index: -1;
+  }
 }
 
 .program__title {
@@ -25,7 +35,17 @@
     background-size: 100% auto;
     background-position: left 26px top 250px;
   }
-  
+
+  .program .wrapper {
+    overflow: hidden;
+
+    &::before {
+      content: url("../../img/program-bg-m.jpg");
+      top: 140px;
+      right: -7%;
+    }
+  }
+
   .program__title {
     text-align: center;
     margin-left: 0;

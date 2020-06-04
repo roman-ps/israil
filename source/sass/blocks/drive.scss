@@ -1,14 +1,32 @@
 .drive {
-  background-image: url("../../img/drive-bg.jpg"), url("../../img/drive-bag.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: top right, top 135px left -73px;
-  background-size: auto, auto;
-  padding: 209px 0 133px;
   font-family: $font-firasans;
+  overflow: hidden;
 }
 
 .drive .wrapper {
+  padding: 209px 0 133px;
+  overflow: visible;
+  position: relative;
 
+  &::before {
+    @include pseudo;
+    background-image: url("../../img/drive-bag.png");
+    width: 220px;
+    height: 262px;
+    top: 134px;
+    left: -185px;
+    z-index: -1;
+  }
+
+  &::after {
+    @include pseudo;
+    background-image: url("../../img/drive-bg.jpg");
+    width: 818px;
+    height: 594px;
+    top: 0;
+    right: -112px;
+    z-index: -2;
+  }
 }
 
 .drive__title {
@@ -57,13 +75,24 @@
 
 @media #{$tablet} {
   .drive {
-    padding: 70px 0 410px;
-    background-position: bottom center, top 60px left;
-    background-size: 600px, auto;
+
   }
 
   .drive .wrapper {
     text-align: center;
+    padding: 50px 0 383px;
+
+    &::before {
+      background-image: url("../../img/drive-bag-m.png");
+      width: 158px;
+      height: 188px;
+      left: -50px;
+      top: 65px;
+    }
+
+    &::after {
+      top: 15px;
+    }
   }
 
   .drive__description {
@@ -82,15 +111,24 @@
 }
 
 @media #{$mobile} {
-  .drive {
-    padding: 38px 0 306px;
-    background-position: bottom center, top -10px left -55px;
-    background-size: 424px auto, auto;
-    background-image: url("../../img/drive-bg.jpg"), url("../../img/drive-bag-m.png");
-  }
-
   .drive .wrapper {
-    padding: 0 16px;
+    padding: 38px 16px 306px;
+
+    &::before {
+      background-image: url("../../img/drive-bag-m.png");
+      width: 158px;
+      height: 188px;
+      left: -55px;
+      top: -12px;
+    }
+
+    &::after {
+      background-image: url("../../img/drive-bg-m.jpg");
+      width: 424px;
+      height: 308px;
+      top: auto;
+      right: -52px;
+    }
   }
 
   .drive__title {
