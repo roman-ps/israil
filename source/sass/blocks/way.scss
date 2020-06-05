@@ -58,9 +58,19 @@
 }
 
 .way__list {
+  position: relative;
   padding-left: 0;
   padding-right: 17%;
   margin-top: 26px;
+
+  &::before {
+    @include pseudo;
+    width: 2px;
+    height: 229px;
+    background-image:url("../../img/way-vector.png");
+    left: 2px;
+    top: 37px;
+  }
 }
 
 .way__item {
@@ -144,6 +154,11 @@
 
   .way__list {
     padding-left: 20px;
+
+    &::before {
+      left: 22px;
+      top: 0;
+    }
   }
 
   .way__description,
@@ -190,6 +205,11 @@
 
   .way__list {
     padding-right: 0;
+
+    &::before {
+      height: calc(100% - 55px);
+      left: 9px;
+    }
   }
 
   .way__important {

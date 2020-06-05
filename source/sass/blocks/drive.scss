@@ -58,13 +58,24 @@
   line-height: 20px;
   font-weight: 700;
   border: none;
+  border-radius: 80px;
+  background: #FFFFFF;
   text-transform: uppercase;
   padding: 19px 40px 19px 40px;
   color: $color-black;
   opacity: 0.5;
+  cursor: pointer;
 
   &:focus {
     outline: 0;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid #FF0000;
+  }
+
+  &:valid:not(:placeholder-shown)  {
+    border: 2px solid $color-black;
   }
 }
 
@@ -74,10 +85,6 @@
 }
 
 @media #{$tablet} {
-  .drive {
-
-  }
-
   .drive .wrapper {
     text-align: center;
     padding: 50px 0 383px;

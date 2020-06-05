@@ -10,11 +10,22 @@
   color: $color-black;
   opacity: 0.5;
   text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: underline;
+  outline: none;
 
   &:focus {
     color: $color-black;
     opacity: 0.87;
     border: 2px solid $color-yellow;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid #FF0000;
+  }
+
+  &:valid:not(:placeholder-shown)  {
+    border: 2px solid $color-black;
   }
 }
 

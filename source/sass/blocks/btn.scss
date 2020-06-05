@@ -1,6 +1,6 @@
 .btn {
   font-family: $font-firasans;
-  background: linear-gradient(140.64deg, #FFC341 20.46%, #FFD701 65.31%);
+  background: $gradient;
   border-radius: 80px;
   text-transform: uppercase;
   color: #ffffff;
@@ -13,4 +13,9 @@
   border: 0;
   box-sizing: border-box;
   cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background: linear-gradient(143.55deg, #FFC341 -50.3%, #FFD701 63.1%);
+  }
 }
