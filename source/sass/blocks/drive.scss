@@ -10,7 +10,7 @@
 
   &::before {
     @include pseudo;
-    background-image: url("../../img/drive-bag.png");
+    background-image: url("../img/drive-bag.png");
     width: 220px;
     height: 262px;
     top: 134px;
@@ -20,7 +20,7 @@
 
   &::after {
     @include pseudo;
-    background-image: url("../../img/drive-bg.jpg");
+    background-image: url("../img/drive-bg.jpg");
     width: 818px;
     height: 594px;
     top: 0;
@@ -54,10 +54,12 @@
 }
 
 .drive__form-input {
+  box-sizing: border-box;
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
   border: none;
+  //border: 2px solid transparent;
   border-radius: 80px;
   background: #FFFFFF;
   text-transform: uppercase;
@@ -65,9 +67,9 @@
   color: $color-black;
   opacity: 0.5;
   cursor: pointer;
+  outline: 0;
 
   &:focus {
-    outline: 0;
   }
 
   &:invalid:not(:placeholder-shown) {
@@ -90,7 +92,7 @@
     padding: 50px 0 383px;
 
     &::before {
-      background-image: url("../../img/drive-bag-m.png");
+      background-image: url("../img/drive-bag-m.png");
       width: 158px;
       height: 188px;
       left: -50px;
@@ -122,7 +124,7 @@
     padding: 38px 16px 306px;
 
     &::before {
-      background-image: url("../../img/drive-bag-m.png");
+      background-image: url("../img/drive-bag-m.png");
       width: 158px;
       height: 188px;
       left: -55px;
@@ -130,7 +132,7 @@
     }
 
     &::after {
-      background-image: url("../../img/drive-bg-m.jpg");
+      background-image: url("../img/drive-bg-m.jpg");
       width: 424px;
       height: 308px;
       top: auto;

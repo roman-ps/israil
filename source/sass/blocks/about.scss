@@ -2,7 +2,6 @@
   background-image: url("../img/about-color_bg.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
-  //background-size: 100% auto;
   padding-bottom: 100px;
 }
 
@@ -12,9 +11,6 @@
   height: 460px;
   margin: 47px auto 0;
   overflow: hidden;
-  mask-image: url("../../img/about-mask.svg");
-  mask-size: cover;
-  mask-repeat: no-repeat;
 }
 
 .about__play {
@@ -57,16 +53,9 @@
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
 
     &::before {
-      border-left-color: #1FC0FC;
+      border-left-color: $color-blue;
     }
   }
-}
-
-.about__pic {
-  left: -64px;
-  top: -127px;
-  position: relative;
-  z-index: -1;
 }
 
 .about__title {
@@ -80,7 +69,7 @@
   font-weight: normal;
   font-size: 17px;
   line-height: 170%;
-  color: #484848;
+  color: $color-black;
   width: 700px;
   margin: -8px auto 0 18.8%;
 }
@@ -121,7 +110,7 @@
 
     &::before {
       border: 8px solid transparent;
-      border-left-color: #1FC0FC;
+      border-left-color: $color-blue;
       border-left-width: 12px;
       top: 19px;
       left: 34px;
@@ -155,10 +144,5 @@
     width: 320px;
     height: 224px;
     margin: 49px auto 0;
-  }
-
-  .about__pic {
-    left: -110px;
-    top: -123px;
   }
 }

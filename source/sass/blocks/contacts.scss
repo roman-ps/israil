@@ -1,7 +1,7 @@
 .contacts {
   margin: 98px 0 0;
   font-family: $font-firasans;
-  background-image: url(../../img/contacts-color_bg.jpg);
+  background-image: url("../img/contacts-color_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
@@ -42,7 +42,7 @@
 
   &::before {
     @include pseudo;
-    background-image: url("../../img/contacts-icon_marker-light.svg");
+    background-image: url("../img/contacts-icon_marker-light.svg");
     width: 12px;
     height: 18px;
     top: 0;
@@ -61,7 +61,7 @@
 
   &::after {
     @include pseudo;
-    background-image: url("../../img/icon-gps.svg");
+    background-image: url("../img/icon-gps.svg");
     width: 16px;
     height: 15px;
     top: 50%;
@@ -147,13 +147,17 @@
   font-size: 13px;
   line-height: 150%;
   color: $color-black;
-  opacity: 0.50;
+  opacity: 0.5;
 }
 
 .contacts__form-input {
   width: 250px;
   margin-right: 21px;
   margin-bottom: 20px;
+}
+
+.contacts__form-input[type="tel"] {
+  text-decoration: underline;
 }
 
 .contacts__btn {

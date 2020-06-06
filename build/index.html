@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сайт рассказывающий об обучении в Израиле">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Обучение в Израиле</title>
   <link rel="stylesheet" href="css/style.min.css">
@@ -36,7 +37,7 @@
         <h1 class="promo__title visually-hidden">Израиль</h1>
         <p class="promo__description">Учёба, путешествие и карьера для еврейской молодёжи</p>
         <div class="promo__scrolling">
-          <img src="img/icon-mouse_scroll.svg">
+          <img src="img/icon-mouse_scroll.svg" alt="Скролл">
         </div>
       </section>
     </div>
@@ -54,11 +55,11 @@
         </p>
       </div>
       <div class="about__container">
-        <button class="about__play" type="button"></button>
+        <button class="about__play" type="button" aria-label="Play"></button>
         <picture>
-          <source media="(min-width: 768px)" srcset="img/about-bg.jpg">
-          <source media="(max-width: 767px)" srcset="img/about-bg-m.jpg">
-          <img class="about__pic" src="img/about-bg.jpg" alt="Фото Маса">
+          <source media="(min-width: 768px)" srcset="img/about-bg.png">
+          <source media="(max-width: 767px)" srcset="img/about-bg-m.png">
+          <img class="about__pic" src="img/about-bg.png" alt="Фото Маса">
         </picture>
       </div>
     </div>
@@ -139,7 +140,9 @@
         Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!
       </p>
       <form class="drive__form form" action="#" method="POST">
-        <input class="drive__form-input" type="tel" name="phone" id="phone" placeholder="Телефон" required="">
+        <label for="phone">
+          <input class="drive__form-input" type="tel" name="phone" id="phone" placeholder="Телефон" required="">
+        </label>
         <button class="drive__btn btn" type="button">Перезвоните мне
       </button></form>
     </div>
@@ -253,7 +256,7 @@
           <p class="faq__list-title">
             <span class="faq__list-number">1 </span>Кто организатор? Какие сроки у программы?
           </p>
-          <p class="faq__list-description hidden">
+          <p class="faq__list-description">
             Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
           </p>
         </li>
@@ -261,11 +264,11 @@
           <p class="faq__list-title">
             <span class="faq__list-number">2 </span>Что такое грант на обучение?
           </p>
-          <p class="faq__list-description hidden">
+          <p class="faq__list-description">
             Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
           </p>
         </li>
-        <li class="faq__list-item">
+        <li class="faq__list-item faq__list-item--open">
           <p class="faq__list-title">
             <span class="faq__list-number">3 </span>Как определяется стоимость программы?
           </p>
@@ -277,7 +280,7 @@
           <p class="faq__list-title">
             <span class="faq__list-number">4 </span>Что такое грант на обучение?
           </p>
-          <p class="faq__list-description hidden">
+          <p class="faq__list-description">
             Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
           </p>
         </li>
@@ -285,7 +288,7 @@
           <p class="faq__list-title">
             <span class="faq__list-number">5 </span>Признаётся ли учеба в рамках проекта для дальнейшего обучения?
           </p>
-          <p class="faq__list-description hidden">
+          <p class="faq__list-description">
             Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
           </p>
         </li>
@@ -293,7 +296,7 @@
           <p class="faq__list-title">
           <span class="faq__list-number">6 </span>Как выглдядит полный процесс регистрации на&nbsp;программу «Маса»?
           </p>
-          <p class="faq__list-description hidden">
+          <p class="faq__list-description">
           Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
           </p>
         </li>
@@ -479,7 +482,7 @@
         </p>
         <div class="contacts__curator-container">
           <div class="contacts__pic-container">
-            <img class="contacts__curator-pic" src="img/contacts-curator_anna.jpg" width="112" height="112">
+            <img class="contacts__curator-pic" src="img/contacts-curator_anna.jpg" width="112" height="112" alt="Куратор Анна">
           </div>
           <div class="contacts__data">
             <p class="contacts__data-status">
@@ -528,8 +531,12 @@
           </p>
         </div>
         <form class="contacts__form form" action="#" method="POST">
-          <input class="contacts__form-input form-input" type="text" placeholder="Имя" name="name" required="">
-          <input class="contacts__form-input form-input" type="tel" placeholder="+7 (923) 41" name="phone" required="">
+          <label for="name">
+            <input class="contacts__form-input form-input" type="text" placeholder="Имя" name="name" required="">
+          </label>
+          <label for="phone">
+            <input class="contacts__form-input form-input" type="tel" placeholder="+7 (923) 41" name="phone" required="">
+          </label>
           <button class="contacts__btn btn" type="button">Перезвоните мне</button>
         </form>
       </div>

@@ -1,7 +1,7 @@
 .mention {
   margin: 80px 0 0;
   padding-bottom: 190px;
-  background-image: url("../../img/mention-bg.jpg");
+  background-image: url("../img/mention-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -39,7 +39,7 @@
 
   &::before {
     @include pseudo;
-    background-image: url("../../img/social-icon_instagram-3.svg");
+    background-image: url("../img/social-icon_instagram-3.svg");
     width: 24px;
     height: 24px;
     top: 50%;
@@ -57,7 +57,7 @@
 
 @media #{$mobile} {
   .mention {
-    background-image: url("../../img/mention-bg-m.jpg");
+    background-image: url("../img/mention-bg-m.jpg");
     background-position: top 45% left -70px;
     padding: 0;
     margin: 0;

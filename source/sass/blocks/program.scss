@@ -9,7 +9,7 @@
 
   &::before {
     @include pseudo;
-    content: url("../../img/program-bg.jpg");
+    content: url("../img/program-bg.jpg");
     top: -49px;
     right: - 112px;
     z-index: -1;
@@ -40,7 +40,7 @@
     overflow: hidden;
 
     &::before {
-      content: url("../../img/program-bg-m.jpg");
+      content: url("../img/program-bg-m.jpg");
       top: 140px;
       right: -7%;
     }

@@ -1,7 +1,7 @@
 .faq {
   margin-top: 55px;
   padding: 90px 0 0px;
-  background-image: url("../../img/faq-color_bg.jpg");
+  background-image: url("../img/faq-color_bg.jpg");
   background-repeat: no-repeat;
   background-position: top;
   overflow: hidden;
@@ -14,17 +14,18 @@
 
   &::after {
     @include pseudo;
-    content: url("../../img/faq-bag.png");
+    content: url("../img/faq-bag.png");
     left: -153px;
     bottom: -20px;
   }
 
   &::before {
     @include pseudo;
-    background-image: url("../../img/faq-bg.jpg");
+    background-image: url("../img/faq-bg.jpg");
     width: 645px;
     height: 803px;
     right: -112px;
+    top: -2px;
   }
 }
 
@@ -60,6 +61,7 @@
     background-color: #1FC0FC;
     top: 20px;
   }
+
   &::before {
     right: 42px;
     transform: rotate(45deg);
@@ -75,6 +77,18 @@
   }
 }
 
+.faq__list-item--open {
+  &::before {
+    right: 42px;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    right: 48px;
+    transform: rotate(45deg);
+  }
+}
+
 .faq__list-title {
   width: 73.2%;
   display: flex;
@@ -86,6 +100,7 @@
 }
 
 .faq__list-description {
+  display: none;
   width: 85.7%;
   align-items: baseline;
   margin-bottom: 29px;
@@ -94,6 +109,10 @@
   line-height: 140%;
   color: $color-black;
   opacity: 0.74;
+}
+
+.faq__list-item--open .faq__list-description {
+  display: block;
 }
 
 .faq__list-number {

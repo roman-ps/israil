@@ -1,6 +1,6 @@
 .way {
   padding: 153px 0 303px;
-  background-image: url("../../img/way-color_bg.jpg");
+  background-image: url("../img/way-color_bg.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   overflow: hidden;
@@ -13,7 +13,7 @@
 
   &::after {
     @include pseudo;
-    background-image: url("../../img/way-stamp.png");
+    background-image: url("../img/way-stamp.png");
     width: 337px;
     height: 254px;
     top: 212px;
@@ -67,7 +67,7 @@
     @include pseudo;
     width: 2px;
     height: 229px;
-    background-image:url("../../img/way-vector.png");
+    background-image:url("../img/way-vector.png");
     left: 2px;
     top: 37px;
   }
@@ -181,7 +181,7 @@
   .way .wrapper {
 
     &::after {
-      background-image: url("../../img/way-stamp-m.png");
+      background-image: url("../img/way-stamp-m.png");
       width: 264px;
       height: 199px;
       top: 300px;

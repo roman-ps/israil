@@ -1,7 +1,7 @@
 .residence {
   margin-top: -205px;
   padding: 30px 0 64px;
-  background-image: url("../../img/residence-color_bg.jpg");
+  background-image: url("../img/residence-color_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
@@ -14,7 +14,7 @@
 
   &::after {
     @include pseudo;
-    background-image: url("../../img/residence-watch.png");
+    background-image: url("../img/residence-watch.png");
     width: 124px;
     height: 148px;
     right: -141px;

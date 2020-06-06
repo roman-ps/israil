@@ -1,7 +1,7 @@
 .reviews {
   padding: 41px 0 0;
   font-family: $font-firasans;
-  background-image: url(../../img/reviews-color_bg.jpg);
+  background-image: url("../img/reviews-color_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
@@ -17,12 +17,10 @@
   position: relative;
   flex-wrap: wrap;
   overflow: visible;
-  /* background-image: url(../../img/reviews-color_bg.jpg);
-  background-repeat: no-repeat;
- */
+
   &::after {
     @include pseudo;
-    background-image: url("../../img/reviews-sketch.png");
+    background-image: url("../img/reviews-sketch.png");
     width: 535px;
     height: 318px;
     top: 0;
@@ -191,7 +189,7 @@
     padding: 24px 16px 0 16px;
 
     &::after {
-      background-image: url("../../img/reviews-sketch-m.png");
+      background-image: url("../img/reviews-sketch-m.png");
       width: 439px;
       height: 261px;
       top: 487px;
