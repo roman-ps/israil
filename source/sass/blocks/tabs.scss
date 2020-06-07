@@ -28,16 +28,17 @@
 }
 
 .tabs__item-label {
-  cursor: pointer;
+  width: 194px;
+  position: relative;
   display: block;
   padding: 25px 0 24px 72px;
-  position: relative;
   margin-bottom: 5px;
   opacity: 0.87;
   color: $color-black;
   font-size: 15px;
   line-height: 18px;
   box-sizing: border-box;
+  cursor: pointer;
 
   &::before {
     @include pseudo;
@@ -145,7 +146,8 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 170%;
-  color: rgba(72, 72, 72, 0.87);
+  color: $color-black;
+  opacity: 0.87;
   padding-right: 6px;
 
   &--mini {
@@ -172,8 +174,9 @@
     right: -34px;
     width: 0;
     height: 0;
-    border: 34px solid #ffffff;
+    border: 34px solid transparent;
     border-left-color: #FFD701;
+    border-right: 0;
 }
 
 .tabs__item-input[id="tab-1"]:checked ~ .tabs__control > label[for="tab-1"]::before {
@@ -213,6 +216,7 @@
   }
 
   .tabs__item-label {
+    width: auto;
     min-height: 48px;
     margin: 0 0 0;
     padding: 15px 12px 14px 52px;

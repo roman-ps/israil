@@ -37,7 +37,7 @@
   font-size: 14px;
   letter-spacing: 0.02em;
 
-  &::before {
+  /* &::before {
     @include pseudo;
     background-image: url("../img/social-icon_instagram-3.svg");
     width: 24px;
@@ -45,7 +45,7 @@
     top: 50%;
     left: 39px;
     transform: translateY(-50%);
-  }
+  } */
 }
 
 @media #{$tablet} {
@@ -77,7 +77,7 @@
   }
 
   .mention__description {
-    width: 85%;
+    width: 272px;
     margin: 96px auto 0;
     font-size: 16px;
     line-height: 160%;

@@ -1,0 +1,22 @@
+.icon-social {
+  width: 24px;
+  height: 24px;
+  opacity: 0.16;
+
+  &--white {
+    fill: #ffffff;
+    opacity: 1;
+  }
+}
+
+.icon-social__mention {
+  @include pseudo;
+  top: 15px;
+}
+
+@media #{$mobile} {
+  .icon-social--footer {
+    width: 32px;
+    height: 32px;
+  }
+}

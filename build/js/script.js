@@ -19,6 +19,7 @@ function openPopupRequest(evt) {
 function openPopupDone(evt) {
   evt.preventDefault;
   POPUP_DONE.classList.remove("hidden");
+  POPUP_OVERLAY.classList.remove("hidden");
 }
 
 function closePopupRequest(evt) {
@@ -36,7 +37,9 @@ function closePopup(evt) {
   evt.preventDefault;
   let child = evt.target;
   let parent = evt.currentTarget;
-  if (child.classList.contains("popup__close")) {parent.classList.toggle("hidden")}
+  if (child.classList.contains("popup__close")) {
+    parent.classList.toggle("hidden")
+  }
   POPUP_OVERLAY.classList.add("hidden");
 }
 

@@ -136,7 +136,8 @@
       width: 424px;
       height: 308px;
       top: auto;
-      right: -52px;
+      right: auto;
+      left: -52px;
     }
   }
 
@@ -166,6 +167,7 @@
     border: 2px solid #E3E3E3;
     border-radius: 80px;
     letter-spacing: 0.04em;
+    width: 100%;
   }
 
   .drive__btn {

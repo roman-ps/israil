@@ -7,16 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Обучение в Израиле</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/Firasans-bold.woff" as="font" crossorigin>
   <link rel="preload" href="fonts/Firasans-bold.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/Firasans-medium.woff" as="font" crossorigin>
   <link rel="preload" href="fonts/Firasans-medium.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/Firasans-regular.woff" as="font" crossorigin>
   <link rel="preload" href="fonts/Firasans-regular.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/Montserrat-bold.woff" as="font" crossorigin>
   <link rel="preload" href="fonts/Montserrat-bold.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/Raleway-extrabold.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/Raleway-extrabold.woff2" as="font" crossorigin>
 </head>
 <body>
 
@@ -140,8 +134,8 @@
         Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!
       </p>
       <form class="drive__form form" action="#" method="POST">
-        <label for="phone">
-          <input class="drive__form-input" type="tel" name="phone" id="phone" placeholder="Телефон" required>
+        <label for="drive-phone">
+          <input class="drive__form-input" type="tel" name="phone" id="drive-phone" placeholder="Телефон" required>
         </label>
         <button class="drive__btn btn" type="button">Перезвоните мне</a>
       </form>
@@ -243,7 +237,11 @@
         <p class="mention__description">
           Познакомьтесь с программой&ensp; от&nbsp;первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни, учёбе и путешествиях в&nbsp;Израиле.
         </p>
-        <a class="mention__btn btn" href="#">Смотреть фото</a>
+        <a class="mention__btn btn" href="#">Смотреть фото
+          <svg class="icon-social icon-social--white icon-social__mention">
+            <use xlink:href="img/sprite.svg#instagram"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
@@ -456,17 +454,22 @@
       <ul class="reviews__social social">
         <li class="social__item">
           <a class="social__link" href="http://facebook">Facebook
-            <img src="img/social-icon_facebook-2.svg" alt="Facebook">
-          </a>
+            <svg class="icon-social">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
         </li>
         <li class="social__item">
           <a class="social__link" href="http://twitter.com">Twitter
-            <img src="img/social-icon_twitter-2.svg" alt="Twitter">
+            <svg class="icon-social">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="http://instagram.com">Instagram
-            <img src="img/social-icon_instagram-2.svg" alt="Instagram">
+            <svg class="icon-social">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
           </a>
         </li>
       </ul>
@@ -494,17 +497,22 @@
             <ul class="contacts__social social">
               <li class="social__item">
                 <a class="social__link" href="http://facebook">Facebook
-                  <img src="img/social-icon_facebook3.svg" alt="Facebook">
-                </a>
+                  <svg class="icon-social">
+                    <use xlink:href="img/sprite.svg#facebook"></use>
+                  </svg>
               </li>
               <li class="social__item">
                 <a class="social__link" href="http://whatsapp.com">Whatsapp
-                  <img src="img/social-icon_whatsapp.svg" alt="Whatsapp">
+                  <svg class="icon-social">
+                    <use xlink:href="img/sprite.svg#whatsapp"></use>
+                  </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link" href="http://telegram.com">Telegram
-                  <img src="img/social-icon_telegram.svg" alt="Telegram">
+                  <svg class="icon-social">
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -531,11 +539,11 @@
           </p>
         </div>
         <form class="contacts__form form" action="#" method="POST">
-          <label for="name">
-            <input class="contacts__form-input form-input" type="text" placeholder="Имя" name="name" required>
+          <label for="contact-name">
+            <input class="contacts__form-input form-input" type="text" placeholder="Имя" name="name" id="contact-name" required>
           </label>
-          <label for="phone">
-            <input class="contacts__form-input form-input" type="tel" placeholder="+7 (923) 41" name="phone" required>
+          <label for="contact-phone">
+            <input class="contacts__form-input form-input" type="tel" placeholder="+7 (923) 41" name="phone" id="contact-phone" required>
           </label>
           <button class="contacts__btn btn" type="button">Перезвоните мне</button>
         </form>
@@ -558,17 +566,22 @@
       <ul class="footer__social social">
         <li class="social__item">
           <a class="social__link" href="http://facebook">Facebook
-            <img src="img/social-icon_facebook-2.svg" alt="Facebook">
-          </a>
+            <svg class="icon-social icon-social--footer">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
         </li>
         <li class="social__item">
           <a class="social__link" href="http://twitter.com">Twitter
-            <img src="img/social-icon_twitter-2.svg" alt="Twitter">
+            <svg class="icon-social icon-social--footer">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="http://instagram.com">Instagram
-            <img src="img/social-icon_instagram-2.svg" alt="Instagram">
+            <svg class="icon-social icon-social--footer">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
           </a>
         </li>
       </ul>
