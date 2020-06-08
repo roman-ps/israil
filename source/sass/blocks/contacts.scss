@@ -124,7 +124,7 @@
 }
 
 .contacts__bottom-container {
-  margin-top: 55px;
+  margin-top: 56px;
   display: flex;
   justify-content: space-between;
 }
@@ -154,8 +154,15 @@
 
 .contacts__form-input {
   width: 250px;
+  font-weight: 700;
   margin-right: 21px;
   margin-bottom: 20px;
+  font-size: 14px;
+  padding-left: 39px;
+  padding-top: 20px;
+  padding-bottom: 17px;
+  letter-spacing: 0.04em;
+  line-height: 20px;
 }
 
 .contacts__form-input[type="tel"] {
@@ -164,6 +171,11 @@
 
 .contacts__btn {
   width: 216px;
+  font-size: 14px;
+  letter-spacing: .06em;
+  padding-top: 20px;
+  padding-left: 3px;
+  padding-bottom: 19px;
 }
 
 @media #{$tablet} {
