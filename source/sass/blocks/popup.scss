@@ -12,7 +12,7 @@
 .popup {
   width: 480px;
   position: fixed;
-  top: 25%;
+  top: 124px;
   left: 50%;
   transform: translate(-50%);
   background-color: #ffffff;
@@ -23,7 +23,7 @@
 
 .popup__wrapper {
   position: relative;
-  padding: 56px 72px 40px 48px;
+  padding: 56px 48px 40px 48px;
 }
 
 .popup__wrapper--done {
@@ -98,15 +98,24 @@
 }
 
 .popup__form-input {
+  font-family: $font-firasans;
   width: 360px;
   margin-bottom: 6px;
+  font-size: 14px;
+  padding-left: 39px;
+  padding-top: 20px;
+  padding-bottom: 17px;
+  letter-spacing: 0.04em;
+  line-height: 20px;
+  font-weight: 700;
 }
 
 .popup__btn {
   width: 264px;
   display: block;
-  margin: 24px auto 0;
+  margin: 19px auto 0;
   text-decoration: none;
+  letter-spacing: 0.06em;
 }
 
 @media #{$mobile} {
@@ -119,6 +128,11 @@
   .popup__wrapper {
     padding: 169px 16px 0;
     text-align: center;
+  }
+
+  .popup__close {
+    top: 24px;
+    right: 24px;
   }
 
   .popup__wrapper--done {
