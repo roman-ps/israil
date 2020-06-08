@@ -54,10 +54,12 @@
   position: relative;
   text-transform: uppercase;
   font-weight: 500;
-  font-variant: small-caps;
+  line-height: 150%;
   display: inline-block;
   border-bottom: 1px dashed #1FC0FC;
   margin-left: 13px;
+  font-size: 13px;
+  letter-spacing: 0.03em;
 
   &::after {
     @include pseudo;
@@ -66,7 +68,7 @@
     height: 15px;
     top: 50%;
     transform: translateY(-50%);
-    right: -20px;
+    right: -25px;
   }
 }
 

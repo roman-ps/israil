@@ -37,13 +37,3 @@
     url("../fonts/Montserrat-bold.woff") format("woff");
   font-display: swap;
 }
-
-@font-face {
-  font-family: "Raleway";
-  font-weight: 800;
-  font-style: normal;
-  src: local("Raleway-extrabold"),
-    url("../fonts/Raleway-extrabold.woff2") format("woff2"),
-    url("../fonts/Raleway-extrabold.woff") format("woff");
-  font-display: swap;
-}

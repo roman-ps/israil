@@ -17,8 +17,9 @@
   @include link-standart;
   position: relative;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.05em;
 
   &::after {
     @include pseudo;
