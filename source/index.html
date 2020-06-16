@@ -7,10 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Обучение в Израиле</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/Firasans-bold.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/Firasans-medium.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/Firasans-regular.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/Montserrat-bold.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/Firasans-bold.woff2" as="font">
+  <link rel="preload" href="fonts/Firasans-medium.woff2" as="font">
+  <link rel="preload" href="fonts/Firasans-regular.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-bold.woff2" as="font">
 </head>
 <body>
 
@@ -31,13 +31,15 @@
         <h1 class="promo__title visually-hidden">Израиль</h1>
         <p class="promo__description">Учёба, путешествие и карьера для еврейской молодёжи</p>
         <div class="promo__scrolling">
-          <img src="img/icon-mouse_scroll.svg" alt="Скролл">
+          <a class="promo__scrolling-link" href="#about">Перейти к блоку "O программе"
+            <img src="img/icon-mouse_scroll.svg" alt="Скролл">
+          </a>
         </div>
       </section>
     </div>
   </div>
 
-   <section class="about">
+   <section class="about" id="about">
     <div class="wrapper">
       <h2 class="about__title title">О программе</h2>
       <div class="about__text">
@@ -77,7 +79,7 @@
         </div>
 
         <div class="tabs__descriptions">
-          <div class="tabs__description" id="tab-1">
+          <div class="tabs__description" id="tabs-1">
             <h3 class="tabs__description-title">Общие</h3>
             <p class="tabs__description-text">
               Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это&ensp;также академический центр, живая лаборатория идей и творческого исследования.
@@ -86,7 +88,7 @@
               Может быть, Вы заинтересованы в&nbsp;изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
             </p>
           </div>
-          <div class="tabs__description" id="tab-2">
+          <div class="tabs__description" id="tabs-2">
             <h3 class="tabs__description-title">Академические</h3>
             <p class="tabs__description-text">
               Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это&ensp;также академический центр, живая лаборатория идей и творческого исследования.
@@ -95,7 +97,7 @@
             Может быть, Вы заинтересованы в&nbsp;изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в&nbsp;удивительной университетской среде.
             </p>
           </div>
-          <div class="tabs__description" id="tab-3">
+          <div class="tabs__description" id="tabs-3">
             <h3 class="tabs__description-title">Стажировки</h3>
             <p class="tabs__description-text">
               Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это&ensp;также академический центр, живая лаборатория идей и творческого исследования.
@@ -104,7 +106,7 @@
               Может быть, Вы заинтересованы в&nbsp;изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
             </p>
           </div>
-          <div class="tabs__description" id="tab-4">
+          <div class="tabs__description" id="tabs-4">
             <h3 class="tabs__description-title">Волонтёрство</h3>
             <p class="tabs__description-text ">
               Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это&ensp;также академический центр, живая лаборатория идей и творческого исследования.
@@ -113,7 +115,7 @@
               Может быть, Вы заинтересованы в&nbsp;изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
             </p>
           </div>
-          <div class="tabs__description" id="tab-5">
+          <div class="tabs__description" id="tabs-5">
             <h3 class="tabs__description-title">Религиозные</h3>
             <p class="tabs__description-text">
               Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это&ensp;также академический центр, живая лаборатория идей и творческого исследования.
@@ -137,7 +139,7 @@
         <label for="drive-phone">
           <input class="drive__form-input" type="tel" name="phone" id="drive-phone" placeholder="Телефон" required>
         </label>
-        <button class="drive__btn btn" type="button">Перезвоните мне</a>
+        <button class="drive__btn btn" type="button">Перезвоните мне</button>
       </form>
     </div>
   </section>
@@ -457,6 +459,7 @@
             <svg class="icon-social">
               <use xlink:href="img/sprite.svg#facebook"></use>
             </svg>
+          </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="http://twitter.com">Twitter
@@ -500,6 +503,7 @@
                   <svg class="icon-social">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
+                </a>
               </li>
               <li class="social__item">
                 <a class="social__link" href="http://whatsapp.com">Whatsapp
@@ -569,6 +573,7 @@
             <svg class="icon-social icon-social--footer">
               <use xlink:href="img/sprite.svg#facebook"></use>
             </svg>
+          </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="http://twitter.com">Twitter
@@ -600,13 +605,13 @@
         <input class="popup__form-input form-input" type="tel" placeholder="Телефон" name="phone" required>
         <button class="popup__btn btn" type="submit">Перезвоните мне</button>
         <div class="checkbox-container">
-          <input class="checkbox-container__input" type="checkbox" id="popup" required></input>
+          <input class="checkbox-container__input" type="checkbox" id="popup" required>
           <label class="checkbox-container__label" for="popup">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
         </div>
       </form>
     </div>
   </section>
-  <div class="popup__overlay hidden"></div>
+  <div class="overlay hidden"></div>
 
   <section class="popup popup--done hidden">
     <div class="popup__wrapper popup__wrapper--done">

@@ -157,11 +157,11 @@
   }
 }
 
-.tabs__item-input[id="tab-1"]:checked ~ .tabs__descriptions > #tab-1,
-.tabs__item-input[id="tab-2"]:checked ~ .tabs__descriptions > #tab-2,
-.tabs__item-input[id="tab-3"]:checked ~ .tabs__descriptions > #tab-3,
-.tabs__item-input[id="tab-4"]:checked ~ .tabs__descriptions > #tab-4,
-.tabs__item-input[id="tab-5"]:checked ~ .tabs__descriptions > #tab-5 {
+.tabs__item-input[id="tab-1"]:checked ~ .tabs__descriptions > #tabs-1,
+.tabs__item-input[id="tab-2"]:checked ~ .tabs__descriptions > #tabs-2,
+.tabs__item-input[id="tab-3"]:checked ~ .tabs__descriptions > #tabs-3,
+.tabs__item-input[id="tab-4"]:checked ~ .tabs__descriptions > #tabs-4,
+.tabs__item-input[id="tab-5"]:checked ~ .tabs__descriptions > #tabs-5 {
   display: block;
 }
 

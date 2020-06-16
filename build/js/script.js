@@ -8,7 +8,7 @@ const POPUP = document.querySelector(".popup");
 const POPUP_DONE = document.querySelector(".popup--done");
 const POPUP_REQUEST = document.querySelector(".popup--request");
 const POPUP_CLOSE = document.querySelector(".popup__close");
-const POPUP_OVERLAY = document.querySelector(".popup__overlay");
+const POPUP_OVERLAY = document.querySelector(".overlay");
 
 function openPopupRequest(evt) {
   evt.preventDefault;

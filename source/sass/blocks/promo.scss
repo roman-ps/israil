@@ -20,6 +20,10 @@
   height: 132px;
 }
 
+.promo__scrolling-link {
+  font-size: 0;
+}
+
 @media #{$mobile} {
   .promo {
     padding-bottom: 86px;
