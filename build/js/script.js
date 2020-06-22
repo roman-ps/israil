@@ -1,6 +1,7 @@
 'use strict';
 
 const ESC_KEYCODE = 27;
+const BODY = document.querySelector("body");
 const BTN_CALLBACK = document.querySelector(".header__callback");
 const BTN_DONE = document.querySelector(".drive__btn");
 const BTN_DONE_FORM = document.querySelector(".contacts__btn");
@@ -14,18 +15,21 @@ function openPopupRequest(evt) {
   evt.preventDefault;
   POPUP_REQUEST.classList.remove("hidden");
   POPUP_OVERLAY.classList.remove("hidden");
+  BODY.classList.add("scroll-hidden");
 }
 
 function openPopupDone(evt) {
   evt.preventDefault;
   POPUP_DONE.classList.remove("hidden");
   POPUP_OVERLAY.classList.remove("hidden");
+  BODY.classList.add("scroll-hidden");
 }
 
 function closePopupRequest(evt) {
   evt.preventDefault;
   POPUP_REQUEST.classList.add("hidden");
   POPUP_OVERLAY.classList.add("hidden");
+  BODY.classList.remove("scroll-hidden");
 }
 
 function closePopupDone(evt) {
@@ -39,8 +43,9 @@ function closePopup(evt) {
   let parent = evt.currentTarget;
   if (child.classList.contains("popup__close")) {
     parent.classList.toggle("hidden")
+    POPUP_OVERLAY.classList.add("hidden");
+    BODY.classList.remove("scroll-hidden");
   }
-  POPUP_OVERLAY.classList.add("hidden");
 }
 
 function events() {

@@ -32,6 +32,7 @@
   border: 0;
   top: 32px;
   right: 32px;
+  outline: none;
 
   &::before,
   &::after {
@@ -97,6 +98,10 @@
   letter-spacing: 0.04em;
   line-height: 20px;
   font-weight: 700;
+}
+
+.popup__form-input[type="tel"] {
+  color: $color-yellow;
 }
 
 .popup__btn {
