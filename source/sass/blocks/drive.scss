@@ -65,7 +65,7 @@
   text-transform: uppercase;
   padding: 20px 50px 15px 38px;
   color: $color-black;
-  opacity: 0.5;
+  opacity: 0.87;
   cursor: pointer;
   outline: 0;
 
@@ -79,6 +79,10 @@
 
   &:valid:not(:placeholder-shown)  {
     border: 2px solid $color-black;
+  }
+
+  &::placeholder {
+    opacity: 0.5;
   }
 }
 

@@ -7,7 +7,7 @@
   font-size: 17px;
   line-height: 20px;
   color: $color-black;
-  opacity: 0.5;
+  opacity: 0.87;
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
@@ -24,6 +24,10 @@
 
   &:valid:not(:placeholder-shown)  {
     border: 2px solid $color-black;
+  }
+
+  &::placeholder {
+    opacity: 0.5;
   }
 }
 
