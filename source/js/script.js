@@ -41,7 +41,7 @@ function closePopup(evt) {
   evt.preventDefault;
   let child = evt.target;
   let parent = evt.currentTarget;
-  if (child.classList.contains("popup__close")) {
+  if ((child.classList.contains("popup__close")) || (child.classList.contains("popup__btn")))  {
     parent.classList.toggle("hidden")
     POPUP_OVERLAY.classList.add("hidden");
     BODY.classList.remove("scroll-hidden");
@@ -64,7 +64,6 @@ function events() {
   BTN_CONTACTS.addEventListener("click", openPopupDone);
   POPUP_DONE.addEventListener("click", closePopup);
   POPUP_REQUEST.addEventListener("click", closePopup);
-  window.addEventListener("keydown", closePopupBtn);
   window.addEventListener("keydown", closePopupBtn);
 }
 
