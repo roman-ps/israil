@@ -52,7 +52,8 @@ function events() {
   BTN_CALLBACK.addEventListener("click", openPopupRequest);
   BTN_DONE.addEventListener("click", openPopupDone);
   BTN_DONE_FORM.addEventListener("click", openPopupDone);
-  POPUP.addEventListener("click", closePopup);
+  POPUP_DONE.addEventListener("click", closePopup);
+  POPUP_REQUEST.addEventListener("click", closePopup);
 }
 
 events();
