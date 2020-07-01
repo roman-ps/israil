@@ -1,5 +1,16 @@
 'use strict';
 
+var element = document.getElementById('contact-phone');
+var element2 = document.getElementById('drive-phone');
+var element3 = document.getElementById('popup__form-tel');
+var maskOptions = {
+  mask: '+{7}(000)000-00-00',
+  lazy: false
+};
+var mask = new IMask(element, maskOptions);
+var mask2 = new IMask(element2, maskOptions);
+var mask3 = new IMask(element3, maskOptions);
+
 const ESC_KEYCODE = 27;
 const BODY = document.querySelector("body");
 const BTN_CALLBACK = document.querySelector(".header__callback");
