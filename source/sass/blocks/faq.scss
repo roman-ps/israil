@@ -53,7 +53,7 @@
     cursor: pointer;
   }
 
-  &::before,
+  /* &::before,
   &::after {
     @include pseudo;
     width: 2px;
@@ -70,22 +70,48 @@
   &::after {
     right: 48px;
     transform: rotate(-45deg)
-  }
+  } */
 
   &--high {
     min-height: 89px;
   }
 }
 
-.faq__list-item--open {
+.faq__list-open {
+  @include pseudo;
+  outline: none;
+  font-size: 0;
+  border: none;
+  padding: 0;
+  right: 44px;
+  top: 20px;
+  background: transparent;
+
+  &::before,
+  &::after {
+    @include pseudo;
+    width: 2px;
+    height: 11px;
+    background-color: #1FC0FC;
+  }
+
   &::before {
-    right: 42px;
+    right: 5px;
     transform: rotate(-45deg);
   }
 
   &::after {
-    right: 48px;
+    transform: rotate(45deg)
+  }
+}
+
+.faq__list-item--open .faq__list-open {
+  &::before {
     transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }
 

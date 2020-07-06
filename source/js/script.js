@@ -21,6 +21,13 @@ const POPUP_DONE = document.querySelector(".popup--done");
 const POPUP_REQUEST = document.querySelector(".popup--request");
 const POPUP_CLOSE = document.querySelector(".popup__close");
 const POPUP_OVERLAY = document.querySelector(".overlay");
+let faq = document.querySelector(".faq__list");
+let faqList = document.querySelectorAll(".faq__list");
+let faqItems = [];
+
+for (let i = 0; i < faqList.length; i++) {
+  console.log(faqList[i]);
+}
 
 function openPopupRequest(evt) {
   evt.preventDefault;
@@ -69,6 +76,21 @@ function closePopupBtn(evt) {
   }
 }
 
+function openInset(evt) {
+  evt.preventDefault;
+  let child = evt.target;
+  let parent = evt.currentTarget;
+  console.log(child);
+  console.log(parent);
+  if (child.classList.contains("faq__list-open")) {
+    if (parent.classList.contains("faq__list-item--open")) {
+      parent.classList.remove("faq__list-item--open");
+    }
+     else parent.classList.add("faq__list-item--open");
+  }
+}
+
+
 function events() {
   BTN_CALLBACK.addEventListener("click", openPopupRequest);
   BTN_DRIVE.addEventListener("click", openPopupDone);
@@ -76,6 +98,7 @@ function events() {
   POPUP_DONE.addEventListener("click", closePopup);
   POPUP_REQUEST.addEventListener("click", closePopup);
   window.addEventListener("keydown", closePopupBtn);
+  faq.addEventListener("click", openInset);
 }
 
 events();
