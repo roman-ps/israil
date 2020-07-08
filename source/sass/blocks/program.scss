@@ -38,6 +38,7 @@
 
   .program .wrapper {
     overflow: hidden;
+    overflow-x: scroll;
 
     &::before {
       content: url("../img/program-bg-m.jpg");

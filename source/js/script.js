@@ -79,11 +79,12 @@ function closePopupBtn(evt) {
 function openInset(evt) {
   evt.preventDefault;
   let child = evt.target;
-  let parent = evt.currentTarget;
-  console.log(child);
-  console.log(parent);
+  //let parent = evt.currentTarget;
+  let parent = child.closest(".faq__list-item");
+  console.log("child: ",  child);
+  console.log("parent: ", parent);
   if (child.classList.contains("faq__list-open")) {
-    if (parent.classList.contains("faq__list-item--open")) {
+     if (parent.classList.contains("faq__list-item--open")) {
       parent.classList.remove("faq__list-item--open");
     }
      else parent.classList.add("faq__list-item--open");

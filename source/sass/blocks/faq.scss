@@ -41,6 +41,7 @@
 }
 
 .faq__list-item {
+  position: relative;
   font-family: $font-firasans;
   max-width: 100%;
   min-height: 72px;
@@ -86,21 +87,26 @@
   right: 44px;
   top: 20px;
   background: transparent;
+  cursor: pointer;
+  width: 15px;
+  height: 10px;
 
   &::before,
   &::after {
     @include pseudo;
     width: 2px;
     height: 11px;
+    top: 0;
     background-color: #1FC0FC;
   }
 
   &::before {
-    right: 5px;
+    left: 2px;
     transform: rotate(-45deg);
   }
 
   &::after {
+    left: 9px;
     transform: rotate(45deg)
   }
 }
