@@ -1,15 +1,15 @@
 'use strict';
 
-var element = document.getElementById('contact-phone');
-var element2 = document.getElementById('drive-phone');
-var element3 = document.getElementById('popup__form-tel');
-var maskOptions = {
+let maskContact = document.getElementById('contact-phone');
+let maskDrive = document.getElementById('drive-phone');
+let maskForm = document.getElementById('popup__form-phone');
+let maskOptions = {
   mask: '+{7}(000)000-00-00',
   lazy: false
 };
-var mask = new IMask(element, maskOptions);
-var mask2 = new IMask(element2, maskOptions);
-var mask3 = new IMask(element3, maskOptions);
+let mask = new IMask(maskContact, maskOptions);
+let mask2 = new IMask(maskDrive, maskOptions);
+let mask3 = new IMask(maskForm, maskOptions);
 
 const ESC_KEYCODE = 27;
 const BODY = document.querySelector("body");
@@ -21,13 +21,15 @@ const POPUP_DONE = document.querySelector(".popup--done");
 const POPUP_REQUEST = document.querySelector(".popup--request");
 const POPUP_CLOSE = document.querySelector(".popup__close");
 const POPUP_OVERLAY = document.querySelector(".overlay");
+const PREV_SLIDER = document.querySelector(".reviews__prev-page");
+const NEXT_SLIDER = document.querySelector(".reviews__next-page");
 let faq = document.querySelector(".faq__list");
-let faqList = document.querySelectorAll(".faq__list");
-let faqItems = [];
+let sliders = document.querySelectorAll(".reviews__slider");
+let allSliders = document.querySelector(".reviews__all-page");
+let currentSlider = document.querySelector(".reviews__current-page");
 
-for (let i = 0; i < faqList.length; i++) {
-  console.log(faqList[i]);
-}
+allSliders.textContent = sliders.length;
+
 
 function openPopupRequest(evt) {
   evt.preventDefault;
@@ -76,13 +78,10 @@ function closePopupBtn(evt) {
   }
 }
 
-function openInset(evt) {
+function opentabsFaqInset(evt) {
   evt.preventDefault;
   let child = evt.target;
-  //let parent = evt.currentTarget;
   let parent = child.closest(".faq__list-item");
-  console.log("child: ",  child);
-  console.log("parent: ", parent);
   if (child.classList.contains("faq__list-open")) {
      if (parent.classList.contains("faq__list-item--open")) {
       parent.classList.remove("faq__list-item--open");
@@ -99,7 +98,7 @@ function events() {
   POPUP_DONE.addEventListener("click", closePopup);
   POPUP_REQUEST.addEventListener("click", closePopup);
   window.addEventListener("keydown", closePopupBtn);
-  faq.addEventListener("click", openInset);
+  faq.addEventListener("click", opentabsFaqInset);
 }
 
 events();
