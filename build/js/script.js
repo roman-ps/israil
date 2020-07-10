@@ -23,13 +23,13 @@ const POPUP_CLOSE = document.querySelector(".popup__close");
 const POPUP_OVERLAY = document.querySelector(".overlay");
 const PREV_SLIDER = document.querySelector(".reviews__prev-page");
 const NEXT_SLIDER = document.querySelector(".reviews__next-page");
-let faq = document.querySelector(".faq__list");
-let sliders = document.querySelectorAll(".reviews__slider");
-let allSliders = document.querySelector(".reviews__all-page");
-let currentSlider = document.querySelector(".reviews__current-page");
-
-allSliders.textContent = sliders.length;
-
+const FAQ = document.querySelector(".faq__list");
+const SLIDERS = document.querySelectorAll(".reviews__slider");
+const ALL_SLIDERS = document.querySelector(".reviews__all-page");
+const CURRENT_SLIDER = document.querySelector(".reviews__current-page");
+let slider = 3;
+ALL_SLIDERS.textContent = SLIDERS.length;
+CURRENT_SLIDER.textContent = slider;
 
 function openPopupRequest(evt) {
   evt.preventDefault;
@@ -90,6 +90,27 @@ function opentabsFaqInset(evt) {
   }
 }
 
+function switchSlider(evt) {
+  evt.preventDefault;
+  let current;
+  let next;
+  for (let i = 0; i < SLIDERS.length; i++) {
+    if (!SLIDERS[i].classList.contains("reviews__slider--hidden")) {
+      if (current < 1) {
+        next = current;
+        current = SLIDERS.length;
+      } else {
+        current = i;
+        next = current - 1;
+      }
+    }
+  }
+  console.log(current-1);
+  SLIDERS[current].classList.add("reviews__slider--hidden");
+  SLIDERS[next].classList.remove("reviews__slider--hidden");
+  CURRENT_SLIDER.textContent = current;
+}
+
 
 function events() {
   BTN_CALLBACK.addEventListener("click", openPopupRequest);
@@ -98,7 +119,9 @@ function events() {
   POPUP_DONE.addEventListener("click", closePopup);
   POPUP_REQUEST.addEventListener("click", closePopup);
   window.addEventListener("keydown", closePopupBtn);
-  faq.addEventListener("click", opentabsFaqInset);
+  FAQ.addEventListener("click", opentabsFaqInset);
+  PREV_SLIDER.addEventListener("click", switchSlider);
+  NEXT_SLIDER.addEventListener("click", switchSlider);
 }
 
 events();
