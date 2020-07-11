@@ -96,19 +96,17 @@ function switchSlider(evt) {
   let next;
   for (let i = 0; i < SLIDERS.length; i++) {
     if (!SLIDERS[i].classList.contains("reviews__slider--hidden")) {
+      current = i;
       if (current < 1) {
-        next = current;
-        current = SLIDERS.length;
+        next = SLIDERS.length - 1;
       } else {
-        current = i;
         next = current - 1;
       }
     }
   }
-  console.log(current-1);
   SLIDERS[current].classList.add("reviews__slider--hidden");
   SLIDERS[next].classList.remove("reviews__slider--hidden");
-  CURRENT_SLIDER.textContent = current;
+  CURRENT_SLIDER.textContent = (current > 0) ? current : 6;
 }
 
 
