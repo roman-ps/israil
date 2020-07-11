@@ -97,11 +97,7 @@ function switchSlider(evt) {
   for (let i = 0; i < SLIDERS.length; i++) {
     if (!SLIDERS[i].classList.contains("reviews__slider--hidden")) {
       current = i;
-      if (current < 1) {
-        next = SLIDERS.length - 1;
-      } else {
-        next = current - 1;
-      }
+      next = (current < 1) ? SLIDERS.length - 1 : current - 1;
     }
   }
   SLIDERS[current].classList.add("reviews__slider--hidden");
