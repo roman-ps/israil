@@ -100,9 +100,28 @@ function switchSlider(evt) {
       next = (current < 1) ? SLIDERS.length - 1 : current - 1;
     }
   }
+  console.log('Номер элемента: ', current);
+  console.log('Следующий элемент: ', next);
   SLIDERS[current].classList.add("reviews__slider--hidden");
   SLIDERS[next].classList.remove("reviews__slider--hidden");
   CURRENT_SLIDER.textContent = (current > 0) ? current : 6;
+}
+
+function switchSlider2(evt) {
+  evt.preventDefault;
+  let current;
+  let next;
+  for (let i = 0; i < SLIDERS.length; i++) {
+    if (!SLIDERS[i].classList.contains("reviews__slider--hidden")) {
+      current = i;
+      next = (current > 4) ? 0 : current + 1;
+    }
+  }
+  console.log('Номер элемента: ', current);
+  console.log('Следующий элемент: ', next);
+  SLIDERS[current].classList.add("reviews__slider--hidden");
+  SLIDERS[next].classList.remove("reviews__slider--hidden");
+  CURRENT_SLIDER.textContent = (current < 5) ? next+1 : 1;
 }
 
 
@@ -115,7 +134,7 @@ function events() {
   window.addEventListener("keydown", closePopupBtn);
   FAQ.addEventListener("click", opentabsFaqInset);
   PREV_SLIDER.addEventListener("click", switchSlider);
-  NEXT_SLIDER.addEventListener("click", switchSlider);
+  NEXT_SLIDER.addEventListener("click", switchSlider2);
 }
 
 events();
