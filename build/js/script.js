@@ -33,24 +33,13 @@ let defaultSlider = 3;
 ALL_SLIDERS.textContent = SLIDERS.length;
 CURRENT_SLIDER.textContent = defaultSlider;
 console.log(POPUP_INPUTS);
+console.log(POPUP_FORM);
 
 const openPopup = (item) => (evt) => {
   evt.preventDefault;
   item.classList.remove("hidden");
   POPUP_OVERLAY.classList.remove("hidden");
   BODY.classList.add("scroll-hidden");
-}
-
-function closePopupRequest(evt) {
-  evt.preventDefault;
-  POPUP_REQUEST.classList.add("hidden");
-  POPUP_OVERLAY.classList.add("hidden");
-  BODY.classList.remove("scroll-hidden");
-}
-
-function closePopupDone(evt) {
-  evt.preventDefault;
-  POPUP_DONE.classList.add("hidden");
 }
 
 function closePopup(evt) {
@@ -122,9 +111,10 @@ function showAndHideSliders(current, next) {
 function sendForm(evt) {
   console.log(POPUP_INPUTS);
   for (let i = 0; i < POPUP_INPUTS.length; i++) {
-    console.log(POPUP_INPUTS[i].value)
+    console.log(POPUP_INPUTS[i].value);
     if (!POPUP_INPUTS[i].value) {
       evt.preventDefault();
+      console.log("Noooooooooooooooooooo");
     }
   }
 }
