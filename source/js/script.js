@@ -21,26 +21,22 @@ const POPUP_DONE = document.querySelector(".popup--done");
 const POPUP_REQUEST = document.querySelector(".popup--request");
 const POPUP_CLOSE = document.querySelector(".popup__close");
 const POPUP_OVERLAY = document.querySelector(".overlay");
+const POPUP_FORM = document.querySelector(".popup__form");
+const POPUP_INPUTS = POPUP_FORM.querySelectorAll(".popup__form-input");
 const PREV_SLIDER = document.querySelector(".reviews__prev-page");
 const NEXT_SLIDER = document.querySelector(".reviews__next-page");
 const FAQ = document.querySelector(".faq__list");
 const SLIDERS = document.querySelectorAll(".reviews__slider");
 const ALL_SLIDERS = document.querySelector(".reviews__all-page");
 const CURRENT_SLIDER = document.querySelector(".reviews__current-page");
-let slider = 3;
+let defaultSlider = 3;
 ALL_SLIDERS.textContent = SLIDERS.length;
-CURRENT_SLIDER.textContent = slider;
+CURRENT_SLIDER.textContent = defaultSlider;
+console.log(POPUP_INPUTS);
 
-function openPopupRequest(evt) {
+const openPopup = (item) => (evt) => {
   evt.preventDefault;
-  POPUP_REQUEST.classList.remove("hidden");
-  POPUP_OVERLAY.classList.remove("hidden");
-  BODY.classList.add("scroll-hidden");
-}
-
-function openPopupDone(evt) {
-  evt.preventDefault;
-  POPUP_DONE.classList.remove("hidden");
+  item.classList.remove("hidden");
   POPUP_OVERLAY.classList.remove("hidden");
   BODY.classList.add("scroll-hidden");
 }
@@ -61,8 +57,8 @@ function closePopup(evt) {
   evt.preventDefault;
   let child = evt.target;
   let parent = evt.currentTarget;
-  if ((child.classList.contains("popup__close")) || (child.classList.contains("popup__btn")))  {
-    parent.classList.toggle("hidden")
+  if ((child.classList.contains("popup__close")) || (child.classList.contains("popup__btn--ok")))  {
+    parent.classList.toggle("hidden");
     POPUP_OVERLAY.classList.add("hidden");
     BODY.classList.remove("scroll-hidden");
   }
@@ -90,7 +86,7 @@ function opentabsFaqInset(evt) {
   }
 }
 
-function switchSlider(evt) {
+function switchSliderLeft(evt) {
   evt.preventDefault;
   let current;
   let next;
@@ -104,7 +100,7 @@ function switchSlider(evt) {
   CURRENT_SLIDER.textContent = (current > 0) ? current : 6;
 }
 
-function switchSlider2(evt) {
+function switchSliderRight(evt) {
   evt.preventDefault;
   let current;
   let next;
@@ -123,17 +119,27 @@ function showAndHideSliders(current, next) {
   SLIDERS[next].classList.remove("reviews__slider--hidden");
 }
 
+function sendForm(evt) {
+  console.log(POPUP_INPUTS);
+  for (let i = 0; i < POPUP_INPUTS.length; i++) {
+    console.log(POPUP_INPUTS[i].value)
+    if (!POPUP_INPUTS[i].value) {
+      evt.preventDefault();
+    }
+  }
+}
 
 function events() {
-  BTN_CALLBACK.addEventListener("click", openPopupRequest);
-  BTN_DRIVE.addEventListener("click", openPopupDone);
-  BTN_CONTACTS.addEventListener("click", openPopupDone);
+  BTN_CALLBACK.addEventListener("click", openPopup(POPUP_REQUEST));
+  BTN_DRIVE.addEventListener("click", openPopup(POPUP_DONE));
+  BTN_CONTACTS.addEventListener("click", openPopup(POPUP_DONE));
   POPUP_DONE.addEventListener("click", closePopup);
   POPUP_REQUEST.addEventListener("click", closePopup);
   window.addEventListener("keydown", closePopupBtn);
   FAQ.addEventListener("click", opentabsFaqInset);
-  PREV_SLIDER.addEventListener("click", switchSlider);
-  NEXT_SLIDER.addEventListener("click", switchSlider2);
+  PREV_SLIDER.addEventListener("click", switchSliderLeft);
+  NEXT_SLIDER.addEventListener("click", switchSliderRight);
+  POPUP_FORM.addEventListener("submit", sendForm);
 }
 
 events();
