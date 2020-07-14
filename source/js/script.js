@@ -63,16 +63,11 @@ function closePopupBtn(evt) {
   }
 }
 
-function opentabsFaqInset(evt) {
+function openTabsFaq(evt) {
   evt.preventDefault;
   let child = evt.target;
   let parent = child.closest(".faq__list-item");
-  if (child.classList.contains("faq__list-open")) {
-     if (parent.classList.contains("faq__list-item--open")) {
-      parent.classList.remove("faq__list-item--open");
-    }
-     else parent.classList.add("faq__list-item--open");
-  }
+  if (child.classList.contains("faq__list-open")) parent.classList.toggle("faq__list-item--open");
 }
 
 function switchSliderLeft(evt) {
@@ -126,7 +121,7 @@ function events() {
   POPUP_DONE.addEventListener("click", closePopup);
   POPUP_REQUEST.addEventListener("click", closePopup);
   window.addEventListener("keydown", closePopupBtn);
-  FAQ.addEventListener("click", opentabsFaqInset);
+  FAQ.addEventListener("click", openTabsFaq);
   PREV_SLIDER.addEventListener("click", switchSliderLeft);
   NEXT_SLIDER.addEventListener("click", switchSliderRight);
   POPUP_FORM.addEventListener("submit", sendForm);
