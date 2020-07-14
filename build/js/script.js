@@ -100,10 +100,7 @@ function switchSlider(evt) {
       next = (current < 1) ? SLIDERS.length - 1 : current - 1;
     }
   }
-  console.log('Номер элемента: ', current);
-  console.log('Следующий элемент: ', next);
-  SLIDERS[current].classList.add("reviews__slider--hidden");
-  SLIDERS[next].classList.remove("reviews__slider--hidden");
+  showAndHideSliders(current, next);
   CURRENT_SLIDER.textContent = (current > 0) ? current : 6;
 }
 
@@ -117,11 +114,13 @@ function switchSlider2(evt) {
       next = (current > 4) ? 0 : current + 1;
     }
   }
-  console.log('Номер элемента: ', current);
-  console.log('Следующий элемент: ', next);
+  showAndHideSliders(current, next);
+  CURRENT_SLIDER.textContent = (current < 5) ? next+1 : 1;
+}
+
+function showAndHideSliders(current, next) {
   SLIDERS[current].classList.add("reviews__slider--hidden");
   SLIDERS[next].classList.remove("reviews__slider--hidden");
-  CURRENT_SLIDER.textContent = (current < 5) ? next+1 : 1;
 }
 
 
