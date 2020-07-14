@@ -105,13 +105,14 @@ function showAndHideSliders(current, next) {
 
 function sendForm(evt) {
   console.log(POPUP_INPUTS);
-  for (let i = 0; i < POPUP_INPUTS.length; i++) {
+
+  /* for (let i = 0; i < POPUP_INPUTS.length; i++) {
     console.log(POPUP_INPUTS[i].value);
     if (!POPUP_INPUTS[i].value) {
       evt.preventDefault();
       console.log("Noooooooooooooooooooo");
     }
-  }
+  } */
 }
 
 function events() {
