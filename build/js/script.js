@@ -3,13 +3,18 @@
 let maskContact = document.getElementById('contact-phone');
 let maskDrive = document.getElementById('drive-phone');
 let maskForm = document.getElementById('popup__form-phone');
-let maskOptions = {
-  mask: '+{7}(000)000-00-00',
-  lazy: false
-};
-let mask = new IMask(maskContact, maskOptions);
-let mask2 = new IMask(maskDrive, maskOptions);
-let mask3 = new IMask(maskForm, maskOptions);
+
+maskContact.addEventListener("focus", masking(maskContact));
+//maskDrive.addEventListener("focus", masking(maskDrive));
+//maskForm.addEventListener("focus", masking(maskForm));
+
+function masking(item) {
+  let maskOptions = {
+    mask: '+{7}(000)000-00-00',
+    lazy: false
+  };
+  let mask = new IMask(item, maskOptions);
+}
 
 const ESC_KEYCODE = 27;
 const BODY = document.querySelector("body");
@@ -32,8 +37,6 @@ const CURRENT_SLIDER = document.querySelector(".reviews__current-page");
 let defaultSlider = 3;
 ALL_SLIDERS.textContent = SLIDERS.length;
 CURRENT_SLIDER.textContent = defaultSlider;
-console.log(POPUP_INPUTS);
-console.log(POPUP_FORM);
 
 const openPopup = (item) => (evt) => {
   evt.preventDefault;
@@ -67,7 +70,11 @@ function openTabsFaq(evt) {
   evt.preventDefault;
   let child = evt.target;
   let parent = child.closest(".faq__list-item");
-  if (child.classList.contains("faq__list-open")) parent.classList.toggle("faq__list-item--open");
+  console.log(child);
+  console.log(parent);
+  //parent.classList.toggle("faq__list-item--open");
+  if (child.classList.contains("faq__list-title")) parent.classList.toggle("faq__list-item--open");
+  if (child.classList.contains("faq__list-item")) child.classList.toggle("faq__list-item--open");
 }
 
 function switchSliderLeft(evt) {
@@ -95,24 +102,12 @@ function switchSliderRight(evt) {
     }
   }
   showAndHideSliders(current, next);
-  CURRENT_SLIDER.textContent = (current < 5) ? next+1 : 1;
+  CURRENT_SLIDER.textContent = (current < 5) ? next + 1 : 1;
 }
 
 function showAndHideSliders(current, next) {
   SLIDERS[current].classList.add("reviews__slider--hidden");
   SLIDERS[next].classList.remove("reviews__slider--hidden");
-}
-
-function sendForm(evt) {
-  console.log(POPUP_INPUTS);
-
-  /* for (let i = 0; i < POPUP_INPUTS.length; i++) {
-    console.log(POPUP_INPUTS[i].value);
-    if (!POPUP_INPUTS[i].value) {
-      evt.preventDefault();
-      console.log("Noooooooooooooooooooo");
-    }
-  } */
 }
 
 function events() {
@@ -125,7 +120,6 @@ function events() {
   FAQ.addEventListener("click", openTabsFaq);
   PREV_SLIDER.addEventListener("click", switchSliderLeft);
   NEXT_SLIDER.addEventListener("click", switchSliderRight);
-  POPUP_FORM.addEventListener("submit", sendForm);
 }
 
 events();
