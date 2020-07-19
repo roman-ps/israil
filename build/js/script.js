@@ -26,11 +26,9 @@ const POPUP_DONE = document.querySelector(".popup--done");
 const POPUP_REQUEST = document.querySelector(".popup--request");
 const POPUP_CLOSE = document.querySelector(".popup__close");
 const POPUP_OVERLAY = document.querySelector(".overlay");
-const POPUP_FORM = document.querySelector(".popup__form");
-const POPUP_INPUTS = POPUP_FORM.querySelectorAll(".popup__form-input");
 const PREV_SLIDER = document.querySelector(".reviews__prev-page");
 const NEXT_SLIDER = document.querySelector(".reviews__next-page");
-const FAQ = document.querySelector(".faq__list");
+const FAQ_ITEMS = document.querySelectorAll(".faq__list-item");
 const SLIDERS = document.querySelectorAll(".reviews__slider");
 const ALL_SLIDERS = document.querySelector(".reviews__all-page");
 const CURRENT_SLIDER = document.querySelector(".reviews__current-page");
@@ -66,15 +64,10 @@ function closePopupBtn(evt) {
   }
 }
 
-function openTabsFaq(evt) {
+function openFaqItems(evt) {
   evt.preventDefault;
-  let child = evt.target;
-  let parent = child.closest(".faq__list-item");
-  console.log(child);
-  console.log(parent);
-  //parent.classList.toggle("faq__list-item--open");
-  if (child.classList.contains("faq__list-title")) parent.classList.toggle("faq__list-item--open");
-  if (child.classList.contains("faq__list-item")) child.classList.toggle("faq__list-item--open");
+  let target = evt.currentTarget;
+  target.classList.toggle("faq__list-item--open");
 }
 
 function switchSliderLeft(evt) {
@@ -117,9 +110,11 @@ function events() {
   POPUP_DONE.addEventListener("click", closePopup);
   POPUP_REQUEST.addEventListener("click", closePopup);
   window.addEventListener("keydown", closePopupBtn);
-  FAQ.addEventListener("click", openTabsFaq);
   PREV_SLIDER.addEventListener("click", switchSliderLeft);
   NEXT_SLIDER.addEventListener("click", switchSliderRight);
+  for (let i = 0; i < FAQ_ITEMS.length; i++) {
+    FAQ_ITEMS[i].addEventListener("click", openFaqItems);
+  }
 }
 
 events();
