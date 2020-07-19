@@ -236,8 +236,7 @@
    .contacts__map-pic {
     max-width: none;
     position: absolute;
-    left: -218px;
-    right: 0;
+    left: calc(50% - 378px);
   }
 
   .contacts__curator-container {
