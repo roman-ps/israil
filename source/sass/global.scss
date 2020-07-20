@@ -23,6 +23,18 @@ body {
   }
 }
 
+.main-container .wrapper {
+  padding: 0 15px;
+
+  @media #{$tablet} {
+    padding: 0;
+  }
+
+  @media #{$mobile} {
+    padding: 0;
+  }
+}
+
 .hidden {
   display: none;
 }

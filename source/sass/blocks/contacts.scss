@@ -13,6 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0 15px;
 }
 
 .contacts__left-container {
@@ -179,6 +180,10 @@
     background: #ffffff;
   }
 
+  .contacts .wrapper {
+    padding: 0;
+  }
+
   .contacts__left-container {
     width: 100%;
     padding-left: 16px;
@@ -215,6 +220,10 @@
   .contacts {
     background: #ffffff;
     margin-top: 74px;
+  }
+
+  .contacts .wrapper {
+    padding: 0;
   }
 
   .contacts__title {

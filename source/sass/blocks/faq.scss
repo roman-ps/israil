@@ -11,6 +11,7 @@
   position: relative;
   overflow: visible;
   padding-bottom: 115px;
+  padding-left: 15px;
 
   &::after {
     @include pseudo;
@@ -53,25 +54,6 @@
   &:hover {
     cursor: pointer;
   }
-
-  /* &::before,
-  &::after {
-    @include pseudo;
-    width: 2px;
-    height: 11px;
-    background-color: #1FC0FC;
-    top: 20px;
-  }
-
-  &::before {
-    right: 42px;
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    right: 48px;
-    transform: rotate(-45deg)
-  } */
 
   &--high {
     min-height: 89px;
@@ -163,6 +145,7 @@
   }
 
   .faq .wrapper {
+    padding-left: 0;
 
     &::after {
       left: -130px;
