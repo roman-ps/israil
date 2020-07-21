@@ -61,3 +61,10 @@ body {
 .scroll-hidden {
   overflow: hidden;
 }
+
+@media #{$mobile} {
+  .swiper-container-android .swiper-slide,
+  .swiper-wrapper {
+    transform: translate3d(-43px, 0, 0);
+  }
+}

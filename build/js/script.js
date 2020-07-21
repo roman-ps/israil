@@ -117,4 +117,10 @@ function events() {
   }
 }
 
+
+let mySwiper = new Swiper('.swiper-container', {
+  direction: 'horizontal',
+  loop: true,
+})
+
 events();

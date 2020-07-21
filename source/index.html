@@ -6,6 +6,7 @@
   <meta name="description" content="Сайт рассказывающий об обучении в Израиле">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Обучение в Израиле</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Firasans-bold.woff2" as="font">
   <link rel="preload" href="fonts/Firasans-medium.woff2" as="font">
@@ -124,13 +125,13 @@
   <section class="program">
     <div class="wrapper">
       <h2 class="program__title title">Программы</h2>
-      <div class="program__tabs tabs">
+      <div class="program__tabs tabs swiper-container">
         <input class="tabs__item-input" type="radio" name="tab" id="tab-1">
         <input class="tabs__item-input" type="radio" name="tab" id="tab-2" checked>
         <input class="tabs__item-input" type="radio" name="tab" id="tab-3">
         <input class="tabs__item-input" type="radio" name="tab" id="tab-4">
         <input class="tabs__item-input" type="radio" name="tab" id="tab-5">
-        <div class="tabs__control">
+        <div class="tabs__control swiper-wrapper">
           <label class="tabs__item-label tabs__item-label--culture" for="tab-1">Общие</label>
           <label class="tabs__item-label tabs__item-label--business" for="tab-2">Академические</label>
           <label class="tabs__item-label tabs__item-label--study" for="tab-3">Стажировки</label>
@@ -691,6 +692,7 @@
   </section>
 
   <script src="https://unpkg.com/imask"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
