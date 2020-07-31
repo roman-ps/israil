@@ -32,6 +32,7 @@ const FAQ_ITEMS = document.querySelectorAll(".faq__list-item");
 const SLIDERS = document.querySelectorAll(".reviews__slider");
 const ALL_SLIDERS = document.querySelector(".reviews__all-page");
 const CURRENT_SLIDER = document.querySelector(".reviews__current-page");
+const SWIPER = document.querySelector(".swiper-container");
 let defaultSlider = 3;
 ALL_SLIDERS.textContent = SLIDERS.length;
 CURRENT_SLIDER.textContent = defaultSlider;
@@ -112,43 +113,30 @@ function events() {
   window.addEventListener("keydown", closePopupBtn);
   PREV_SLIDER.addEventListener("click", switchSliderLeft);
   NEXT_SLIDER.addEventListener("click", switchSliderRight);
-  window.addEventListener("resize", destroySwipe);
+  window.addEventListener("resize", initSwipe);
   for (let i = 0; i < FAQ_ITEMS.length; i++) {
     FAQ_ITEMS[i].addEventListener("click", openFaqItems);
   }
 }
 
-
-/* let mySwiper = new Swiper('.swiper-container', {
-  direction: 'horizontal',
-  slidesPerView: 'auto',
-  freeMode: true,
-}) */
-
-let mySwiper = undefined;
-function destroySwipe() {
+let mySwiper;
+function initSwipe() {
   let screenWidth = screen.width;
-  if ((screenWidth <= 767) && (mySwiper == undefined)) {
-    console.log('1111111111111111111111')
+  if (screenWidth <= 767 && SWIPER.dataset.mobile == 'false') {
     mySwiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       slidesPerView: 'auto',
       freeMode: true,
-    })
-  } else if ((screenWidth > 767) && (mySwiper != undefined)) {
-    mySwiper.destroy(true, true);
-    mySwiper = undefined;
-    document.querySelector('.swiper-wrapper').classList.remove('.swiper-wrapper');
-    document.querySelector('.swiper-slide').removeAttribute('style');
+      slideClass: 'tabs__item-label',
+    });
+    SWIPER.dataset.mobile = 'true';
+  }
+  if (screenWidth > 767) {
+    SWIPER.dataset.mobile = 'false';
+    if (SWIPER.classList.contains('swiper-container-initialized')) {
+      mySwiper.destroy();
+    }
   }
 }
-
-/* function destroySwipe() {
-  let screenWidth = screen.width;
-  if (screenWidth > (767)) mySwiper.destroy(true, true);
-  console.log(typeof mySwiper);
-} */
-
-console.log(screen.width);
 
 events();
