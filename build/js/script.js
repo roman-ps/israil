@@ -112,16 +112,43 @@ function events() {
   window.addEventListener("keydown", closePopupBtn);
   PREV_SLIDER.addEventListener("click", switchSliderLeft);
   NEXT_SLIDER.addEventListener("click", switchSliderRight);
+  window.addEventListener("resize", destroySwipe);
   for (let i = 0; i < FAQ_ITEMS.length; i++) {
     FAQ_ITEMS[i].addEventListener("click", openFaqItems);
   }
 }
 
 
-let mySwiper = new Swiper('.swiper-container', {
+/* let mySwiper = new Swiper('.swiper-container', {
   direction: 'horizontal',
   slidesPerView: 'auto',
   freeMode: true,
-})
+}) */
+
+let mySwiper = undefined;
+function destroySwipe() {
+  let screenWidth = screen.width;
+  if ((screenWidth <= 767) && (mySwiper == undefined)) {
+    console.log('1111111111111111111111')
+    mySwiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      slidesPerView: 'auto',
+      freeMode: true,
+    })
+  } else if ((screenWidth > 767) && (mySwiper != undefined)) {
+    mySwiper.destroy(true, true);
+    mySwiper = undefined;
+    document.querySelector('.swiper-wrapper').classList.remove('.swiper-wrapper');
+    document.querySelector('.swiper-slide').removeAttribute('style');
+  }
+}
+
+/* function destroySwipe() {
+  let screenWidth = screen.width;
+  if (screenWidth > (767)) mySwiper.destroy(true, true);
+  console.log(typeof mySwiper);
+} */
+
+console.log(screen.width);
 
 events();
