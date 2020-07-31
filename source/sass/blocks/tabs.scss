@@ -172,7 +172,7 @@
 .tabs__item-input[id="tab-5"]:checked ~ .tabs__control > label[for="tab-5"]::after {
   @include pseudo;
     top: 0;
-    right: -34px;
+    right: -33px;
     width: 0;
     height: 0;
     border: 34px solid transparent;
@@ -264,9 +264,4 @@
       padding-right: 0;
     }
   }
-
-  /* .tabs__item-label:nth-child(4),
-  .tabs__item-label:nth-child(5) {
-    display: none;
-  } */
 }

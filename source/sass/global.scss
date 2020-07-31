@@ -62,14 +62,16 @@ body {
   overflow: hidden;
 }
 
-@media #{$mobile} {
+@media #{$tablet} {
 
   .swiper-wrapper {
-    transform: translate3d(-43px, 0, 0);
+    display: block;
   }
+}
 
-  .swiper-slide {
-    width: auto;
+@media #{$desktop} {
+
+  .swiper-wrapper {
+    display: block;
   }
-
 }
