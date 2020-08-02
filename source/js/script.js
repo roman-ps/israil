@@ -1,17 +1,16 @@
 'use strict';
 
-let maskContact = document.getElementById('contact-phone');
-let maskDrive = document.getElementById('drive-phone');
-let maskForm = document.getElementById('popup__form-phone');
+let maskContact = document.querySelector('#contact-phone');
+let maskDrive = document.querySelector('#drive-phone');
+let maskForm = document.querySelector('#popup__form-phone');
 
 maskContact.addEventListener("focus", masking(maskContact));
-//maskDrive.addEventListener("focus", masking(maskDrive));
-//maskForm.addEventListener("focus", masking(maskForm));
+maskDrive.addEventListener("focus", masking(maskDrive));
+maskForm.addEventListener("focus", masking(maskForm));
 
 function masking(item) {
   let maskOptions = {
     mask: '+{7}(000)000-00-00',
-    lazy: false
   };
   let mask = new IMask(item, maskOptions);
 }
