@@ -11,6 +11,10 @@
 
 .header__phone {
   @include link-standart;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .header__callback {
@@ -20,6 +24,10 @@
   font-weight: 500;
   font-size: 13px;
   letter-spacing: 0.05em;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   &::after {
     @include pseudo;
