@@ -51,6 +51,7 @@
   border-radius: 80px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .drive__form-input {
@@ -92,6 +93,10 @@
   font-weight: 500;
   letter-spacing: 0.05em;
   padding: 20px 5px 15px 5px;
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  bottom: -2px;
 }
 
 @media #{$tablet} {
@@ -182,5 +187,6 @@
     margin: 8px auto 0;
     width: 264px;
     letter-spacing: 0.04em;
+    position: relative;
   }
 }
