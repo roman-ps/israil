@@ -132,6 +132,10 @@
   opacity: 0.2;
   border-top: none;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .reviews__prev-page{
