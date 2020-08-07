@@ -27,14 +27,14 @@ const POPUP_CLOSE = document.querySelector(".popup__close");
 const POPUP_OVERLAY = document.querySelector(".overlay");
 const PREV_SLIDER = document.querySelector(".reviews__prev-page");
 const NEXT_SLIDER = document.querySelector(".reviews__next-page");
-const FAQ_ITEMS = document.querySelectorAll(".faq__list-item");
+const FAQ = document.querySelector(".faq__list");
 const SLIDERS = document.querySelectorAll(".reviews__slider");
 const ALL_SLIDERS = document.querySelector(".reviews__all-page");
 const CURRENT_SLIDER = document.querySelector(".reviews__current-page");
 const SWIPER = document.querySelector(".swiper-container");
-let defaultSlider = 3;
+const DEFAULT_SLIDER = 3;
 ALL_SLIDERS.textContent = SLIDERS.length;
-CURRENT_SLIDER.textContent = defaultSlider;
+CURRENT_SLIDER.textContent = DEFAULT_SLIDER;
 
 const openPopup = (item) => (evt) => {
   evt.preventDefault;
@@ -56,18 +56,12 @@ function closePopup(evt) {
 
 function closePopupBtn(evt) {
   evt.preventDefault;
-  if (evt.keyCode == ESC_KEYCODE) {
+  if (evt.keyCode === ESC_KEYCODE) {
     if (!POPUP_REQUEST.classList.contains("hidden")) POPUP_REQUEST.classList.toggle("hidden");
     if (!POPUP_DONE.classList.contains("hidden")) POPUP_DONE.classList.toggle("hidden");
     POPUP_OVERLAY.classList.add("hidden");
     BODY.classList.remove("scroll-hidden");
   }
-}
-
-function openFaqItems(evt) {
-  evt.preventDefault;
-  let target = evt.currentTarget;
-  target.classList.toggle("faq__list-item--open");
 }
 
 function switchSliderLeft(evt) {
@@ -103,7 +97,14 @@ function showAndHideSliders(current, next) {
   SLIDERS[next].classList.remove("reviews__slider--hidden");
 }
 
-function events() {
+function openFaqItems(evt) {
+  evt.preventDefault;
+  let child = evt.target;
+  let parent = evt.currentTarget;
+  if (child != parent) { child.closest(".faq__list-item").classList.toggle("faq__list-item--open") }
+}
+
+function allEvents() {
   BTN_CALLBACK.addEventListener("click", openPopup(POPUP_REQUEST));
   BTN_DRIVE.addEventListener("click", openPopup(POPUP_DONE));
   BTN_CONTACTS.addEventListener("click", openPopup(POPUP_DONE));
@@ -113,9 +114,7 @@ function events() {
   PREV_SLIDER.addEventListener("click", switchSliderLeft);
   NEXT_SLIDER.addEventListener("click", switchSliderRight);
   window.addEventListener("resize", initSwipe);
-  for (let i = 0; i < FAQ_ITEMS.length; i++) {
-    FAQ_ITEMS[i].addEventListener("click", openFaqItems);
-  }
+  FAQ.addEventListener("click", openFaqItems);
 }
 
 let mySwiper;
@@ -138,4 +137,4 @@ function initSwipe() {
   }
 }
 
-events();
+allEvents();
