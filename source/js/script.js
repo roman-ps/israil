@@ -37,14 +37,14 @@ ALL_SLIDERS.textContent = SLIDERS.length;
 CURRENT_SLIDER.textContent = DEFAULT_SLIDER;
 
 const openPopup = (item) => (evt) => {
-  evt.preventDefault;
+  evt.preventDefault();
   item.classList.remove("hidden");
   POPUP_OVERLAY.classList.remove("hidden");
   BODY.classList.add("scroll-hidden");
 }
 
 function closePopup(evt) {
-  evt.preventDefault;
+  evt.preventDefault();
   let child = evt.target;
   let parent = evt.currentTarget;
   if ((child.classList.contains("popup__close")) || (child.classList.contains("popup__btn--ok")))  {
@@ -55,7 +55,6 @@ function closePopup(evt) {
 }
 
 function closePopupBtn(evt) {
-  evt.preventDefault;
   if (evt.keyCode === ESC_KEYCODE) {
     if (!POPUP_REQUEST.classList.contains("hidden")) POPUP_REQUEST.classList.toggle("hidden");
     if (!POPUP_DONE.classList.contains("hidden")) POPUP_DONE.classList.toggle("hidden");
@@ -65,7 +64,7 @@ function closePopupBtn(evt) {
 }
 
 function switchSliderLeft(evt) {
-  evt.preventDefault;
+  evt.preventDefault();
   let current;
   let next;
   for (let i = 0; i < SLIDERS.length; i++) {
@@ -79,7 +78,7 @@ function switchSliderLeft(evt) {
 }
 
 function switchSliderRight(evt) {
-  evt.preventDefault;
+  evt.preventDefault();
   let current;
   let next;
   for (let i = 0; i < SLIDERS.length; i++) {
@@ -98,7 +97,7 @@ function showAndHideSliders(current, next) {
 }
 
 function openFaqItems(evt) {
-  evt.preventDefault;
+  evt.preventDefault();
   let child = evt.target;
   let parent = evt.currentTarget;
   if (child != parent) { child.closest(".faq__list-item").classList.toggle("faq__list-item--open") }
