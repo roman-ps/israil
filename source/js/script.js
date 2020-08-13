@@ -1,12 +1,5 @@
 'use strict';
 
-function masking(item) {
-  let maskOptions = {
-    mask: '+{7}(000)000-00-00',
-  };
-  let mask = new IMask(item, maskOptions);
-}
-
 const ESC_KEYCODE = 27;
 const BODY = document.querySelector("body");
 const FORM_POPUP = document.querySelector(".popup__form");
@@ -32,7 +25,14 @@ ALL_SLIDERS.textContent = SLIDERS.length;
 CURRENT_SLIDER.textContent = DEFAULT_SLIDER;
 let mySwiper;
 
- function openPopup(evt) {
+function masking(item) {
+  let maskOptions = {
+    mask: '+{7}(000)000-00-00',
+  };
+  let mask = new IMask(item, maskOptions);
+}
+
+function openPopup(evt) {
   evt.preventDefault();
   POPUP_REQUEST.classList.remove("hidden");
   OVERLAY.classList.remove("hidden");
@@ -99,23 +99,10 @@ function openFaqItems(evt) {
 
 function submitForm(evt) {
   evt.preventDefault();
-  console.log(evt);
-  console.log(evt.target);
-  /* let formInputs = FORM_DRIVE.querySelectorAll("input");
-  console.log(formInputs);
-  console.log(typeof formInputs);
-  //console.log(formInputs[0].value);
-  let a = formInputs.every(function (b) {
-    return b != '';
-  });
-  console.log(a)
-  if (a) { */
-    POPUP_DONE.classList.remove("hidden");
-    OVERLAY.classList.remove("hidden");
-    BODY.classList.add("scroll-hidden");
-    if (evt.target.classList.contains("popup__form")) POPUP_REQUEST.classList.add("hidden");
-    //evt.preventDefault();
-  //}
+  POPUP_DONE.classList.remove("hidden");
+  OVERLAY.classList.remove("hidden");
+  BODY.classList.add("scroll-hidden");
+  if (evt.target.classList.contains("popup__form")) POPUP_REQUEST.classList.add("hidden");
 }
 
 function allEvents() {
